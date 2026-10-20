@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="JAS_dual_xMateCR7_rigid_payload">
+  <compiler angle="radian" meshdir="assets" inertiafromgeom="false" autolimits="true" />
+  <option timestep="0.00025" integrator="implicitfast" gravity="0 0 -9.81" cone="elliptic" solver="Newton" iterations="100" tolerance="1e-12" />
+  <default>
+    <joint damping="0.05" armature="0" frictionloss="0" limited="true" />
+    <geom friction="0.6 0.005 0.0001" solref="0.005 1" solimp="0.95 0.99 0.001" />
+  </default>
+  <asset>
+    <mesh name="cr7_base" file="xMateCR7_base.stl" scale="0.001 0.001 0.001" inertia="convex" />
+    <mesh name="cr7_link1" file="xMateCR7_link1.stl" scale="0.001 0.001 0.001" inertia="convex" />
+    <mesh name="cr7_link2" file="xMateCR7_link2.stl" scale="0.001 0.001 0.001" inertia="convex" />
+    <mesh name="cr7_link3" file="xMateCR7_link3.stl" scale="0.001 0.001 0.001" inertia="convex" />
+    <mesh name="cr7_link4" file="xMateCR7_link4.stl" scale="0.001 0.001 0.001" inertia="convex" />
+    <mesh name="cr7_link5" file="xMateCR7_link5.stl" scale="0.001 0.001 0.001" inertia="convex" />
+    <mesh name="cr7_link6" file="xMateCR7_link6.stl" scale="0.001 0.001 0.001" inertia="convex" />
+  </asset>
+  <visual>
+    <global offwidth="1440" offheight="1000" />
+    <headlight ambient="0.4 0.4 0.4" diffuse="0.6 0.6 0.6" />
+  </visual>
+  <worldbody>
+    <light pos="1 -1 2.6" dir="-0.3 0.2 -1" directional="true" />
+    <geom name="ground" type="plane" pos="0 0 -0.02" size="2 2 .05" contype="1" conaffinity="6" rgba="0.19 0.23 0.28 1" />
+    <camera name="overview" pos="1.8 -1.7 1.65" xyaxes="0.686 0.728 0 -0.314 0.296 0.902" fovy="43" />
+    <camera name="front" pos="2.0 0 1.15" xyaxes="0 1 0 -0.243 0 0.970" fovy="45" />
+    <body name="left_base" pos="0 -0.65 0" quat="0.707106781186548 0 0 0.707106781186547">
+      <inertial pos="-0.0118300679054541 0.00204359203623935 0.0523345754822507" quat="0.0119602470730144 0.695796264228673 -0.00111575725811297 0.718138751399143" mass="3.44074938" diaginertia="0.0269531766703209 0.0187193516667648 0.0155110071499554" />
+      <geom name="left_mesh_base" type="mesh" mesh="cr7_base" mass="0" contype="2" conaffinity="1" rgba="0.80 0.83 0.87 1" />
+      <body name="left_link1" pos="0 0 0">
+        <joint name="left_joint1" type="hinge" axis="0 0 1" range="-3.0543 3.0543" damping="0.049" />
+        <inertial pos="1.73519809868708e-07 0.0133881644845803 0.236516595754237" quat="0.995552913204271 -0.0942040157937137 -1.92790813250212e-06 -2.03742328979437e-05" mass="3.2343044172" diaginertia="0.0198765150355292 0.0194993441144624 0.0104045300993698" />
+        <geom name="left_mesh_link1" type="mesh" mesh="cr7_link1" mass="0" contype="2" conaffinity="1" rgba="0.80 0.83 0.87 1" />
+        <body name="left_link2" pos="0 0 0.296">
+          <joint name="left_joint2" type="hinge" axis="0 1 0" range="-3.0543 3.0543" damping="0.049" />
+          <inertial pos="1.01492879339202e-07 0.160568676954694 0.220305224033585" quat="0.999992882513106 0.00377291970885462 0 0" mass="5.32584333318" diaginertia="0.162641386528527 0.159269720544173 0.0167737755024118" />
+          <geom name="left_mesh_link2" type="mesh" mesh="cr7_link2" mass="0" contype="2" conaffinity="1" rgba="0.80 0.83 0.87 1" />
+          <body name="left_link3" pos="0 0 0.49">
+            <joint name="left_joint3" type="hinge" axis="0 -1 0" range="-3.0543 3.0543" damping="0.049" />
+            <inertial pos="9.44974530489481e-07 0.0208798995113942 0.0465887232910584" quat="0.990314575862871 0.138841782021159 1.13969921214623e-05 1.63963226559709e-05" mass="2.53716809424" diaginertia="0.0107815002155003 0.00990374512461268 0.00485632469194991" />
+            <geom name="left_mesh_link3" type="mesh" mesh="cr7_link3" mass="0" contype="2" conaffinity="1" rgba="0.80 0.83 0.87 1" />
+            <body name="left_link4" pos="0 0 0.36">
+              <joint name="left_joint4" type="hinge" axis="0 0 1" range="-3.0543 3.0543" damping="0.049" />
+              <inertial pos="-6.25624869683098e-07 -0.0134985548128453 -0.0753976381187723" quat="0.998386117382 0.0567904876814201 2.16389198368257e-07 -3.35820541581727e-05" mass="2.36639716482" diaginertia="0.0145206468303859 0.0138780319095334 0.00413989223674088" />
+              <geom name="left_mesh_link4" type="mesh" mesh="cr7_link4" mass="0" contype="2" conaffinity="1" rgba="0.34 0.39 0.46 1" />
+              <body name="left_link5" pos="0 -0.151 0">
+                <joint name="left_joint5" type="hinge" axis="0 -1 0" range="-3.0543 3.0543" damping="0.049" />
+                <inertial pos="-6.62335412492163e-05 0.0121229887891534 -0.0137320981423066" quat="0.999923101056848 -0.0121888790424766 0.000497263687137012 -0.00223067912731091" mass="2.5438957908" diaginertia="0.0098534715385801 0.00920742420341165 0.00440141962641979" />
+                <geom name="left_mesh_link5" type="mesh" mesh="cr7_link5" mass="0" contype="2" conaffinity="1" rgba="0.80 0.83 0.87 1" />
+                <body name="left_link6" pos="0 0 0.1265">
+                  <joint name="left_joint6" type="hinge" axis="0 0 1" range="-3.0543 3.0543" damping="0.049" />
+                  <inertial pos="-1.33730874805378e-06 -6.33326243099242e-07 -0.0275545483764925" quat="0.500003844531735 0.499996155438705 -0.499996155438705 0.500003844531735" mass="1.18060882272" diaginertia="0.00154714411046805 0.00103063214503587 0.00103056597999909" />
+                  <geom name="left_mesh_link6" type="mesh" mesh="cr7_link6" mass="0" contype="2" conaffinity="1" rgba="0.34 0.39 0.46 1" />
+                  <geom name="left_grasp_bracket" type="cylinder" pos="0 0 0.05" size="0.024 0.05" mass="0" contype="0" conaffinity="0" rgba="0.95 0.66 0.13 1" />
+                  <geom name="left_grasp_pad" type="box" pos="0 0 0.096" size="0.06 0.035 0.004" mass="0" contype="0" conaffinity="0" rgba="0.20 0.25 0.29 1" />
+                  <site name="left_palm" pos="0 0 0.1" size="0.008" rgba="0.9 0.2 0.1 1" />
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="right_base" pos="0 0.65 0" quat="0.707106781186548 0 0 -0.707106781186547">
+      <inertial pos="-0.0118300679054541 0.00204359203623935 0.0523345754822507" quat="0.0119602470730144 0.695796264228673 -0.00111575725811297 0.718138751399143" mass="3.44074938" diaginertia="0.0269531766703209 0.0187193516667648 0.0155110071499554" />
+      <geom name="right_mesh_base" type="mesh" mesh="cr7_base" mass="0" contype="2" conaffinity="1" rgba="0.80 0.83 0.87 1" />
+      <body name="right_link1" pos="0 0 0">
+        <joint name="right_joint1" type="hinge" axis="0 0 1" range="-3.0543 3.0543" damping="0.052" />
+        <inertial pos="1.73519809868708e-07 0.0133881644845803 0.236516595754237" quat="0.995552913204271 -0.0942040157937137 -1.92790813250212e-06 -2.03742328979437e-05" mass="3.6471943428" diaginertia="0.0224139424868734 0.0219886220865214 0.0117327679843958" />
+        <geom name="right_mesh_link1" type="mesh" mesh="cr7_link1" mass="0" contype="2" conaffinity="1" rgba="0.80 0.83 0.87 1" />
+        <body name="right_link2" pos="0 0 0.296">
+          <joint name="right_joint2" type="hinge" axis="0 1 0" range="-3.0543 3.0543" damping="0.052" />
+          <inertial pos="1.01492879339202e-07 0.160568676954694 0.220305224033585" quat="0.999992882513106 0.00377291970885462 0 0" mass="4.72291767282" diaginertia="0.144229154091335 0.141239186142946 0.0148748575210067" />
+          <geom name="right_mesh_link2" type="mesh" mesh="cr7_link2" mass="0" contype="2" conaffinity="1" rgba="0.80 0.83 0.87 1" />
+          <body name="right_link3" pos="0 0 0.49">
+            <joint name="right_joint3" type="hinge" axis="0 -1 0" range="-3.0543 3.0543" damping="0.052" />
+            <inertial pos="9.44974530489481e-07 0.0208798995113942 0.0465887232910584" quat="0.990314575862871 0.138841782021159 1.13969921214623e-05 1.63963226559709e-05" mass="2.34200131776" diaginertia="0.00995215404507723 0.00914191857656555 0.00448276125410761" />
+            <geom name="right_mesh_link3" type="mesh" mesh="cr7_link3" mass="0" contype="2" conaffinity="1" rgba="0.80 0.83 0.87 1" />
+            <body name="right_link4" pos="0 0 0.36">
+              <joint name="right_joint4" type="hinge" axis="0 0 1" range="-3.0543 3.0543" damping="0.052" />
+              <inertial pos="-6.25624869683098e-07 -0.0134985548128453 -0.0753976381187723" quat="0.998386117382 0.0567904876814201 2.16389198368257e-07 -3.35820541581727e-05" mass="2.51277224718" diaginertia="0.0154188311704098 0.0147364668730097 0.00439596804519908" />
+              <geom name="right_mesh_link4" type="mesh" mesh="cr7_link4" mass="0" contype="2" conaffinity="1" rgba="0.34 0.39 0.46 1" />
+              <body name="right_link5" pos="0 -0.151 0">
+                <joint name="right_joint5" type="hinge" axis="0 -1 0" range="-3.0543 3.0543" damping="0.052" />
+                <inertial pos="-6.62335412492163e-05 0.0121229887891534 -0.0137320981423066" quat="0.999923101056848 -0.0121888790424766 0.000497263687137012 -0.00223067912731091" mass="2.3016200012" diaginertia="0.00891504567776295 0.00833052666022959 0.003982236804856" />
+                <geom name="right_mesh_link5" type="mesh" mesh="cr7_link5" mass="0" contype="2" conaffinity="1" rgba="0.80 0.83 0.87 1" />
+                <body name="right_link6" pos="0 0 0.1265">
+                  <joint name="right_joint6" type="hinge" axis="0 0 1" range="-3.0543 3.0543" damping="0.052" />
+                  <inertial pos="-1.33730874805378e-06 -6.33326243099242e-07 -0.0275545483764925" quat="0.500003844531735 0.499996155438705 -0.499996155438705 0.500003844531735" mass="1.27899289128" diaginertia="0.00167607278634039 0.00111651815712219 0.00111644647833235" />
+                  <geom name="right_mesh_link6" type="mesh" mesh="cr7_link6" mass="0" contype="2" conaffinity="1" rgba="0.34 0.39 0.46 1" />
+                  <geom name="right_grasp_bracket" type="cylinder" pos="0 0 0.05" size="0.024 0.05" mass="0" contype="0" conaffinity="0" rgba="0.95 0.66 0.13 1" />
+                  <geom name="right_grasp_pad" type="box" pos="0 0 0.096" size="0.06 0.035 0.004" mass="0" contype="0" conaffinity="0" rgba="0.20 0.25 0.29 1" />
+                  <site name="right_palm" pos="0 0 0.1" size="0.008" rgba="0.9 0.2 0.1 1" />
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="payload" pos="0 0 0.65">
+      <freejoint name="payload_free" />
+      <inertial pos="0 0 0" mass="2.16" diaginertia="0.031392 0.016704 0.042912" />
+      <geom name="payload_box" type="box" size="0.14 0.2 0.06" mass="0" contype="4" conaffinity="1" rgba="0.23 0.58 0.74 1" />
+      <site name="object_center" size=".008" rgba="1 0.3 0.2 1" />
+    </body>
+  </worldbody>
+  <actuator>
+    <motor name="left_torque1" joint="left_joint1" gear="1" ctrllimited="true" ctrlrange="-194 194" forcelimited="true" forcerange="-194 194" />
+    <motor name="left_torque2" joint="left_joint2" gear="1" ctrllimited="true" ctrlrange="-194 194" forcelimited="true" forcerange="-194 194" />
+    <motor name="left_torque3" joint="left_joint3" gear="1" ctrllimited="true" ctrlrange="-102 102" forcelimited="true" forcerange="-102 102" />
+    <motor name="left_torque4" joint="left_joint4" gear="1" ctrllimited="true" ctrlrange="-66 66" forcelimited="true" forcerange="-66 66" />
+    <motor name="left_torque5" joint="left_joint5" gear="1" ctrllimited="true" ctrlrange="-66 66" forcelimited="true" forcerange="-66 66" />
+    <motor name="left_torque6" joint="left_joint6" gear="1" ctrllimited="true" ctrlrange="-29 29" forcelimited="true" forcerange="-29 29" />
+    <motor name="right_torque1" joint="right_joint1" gear="1" ctrllimited="true" ctrlrange="-194 194" forcelimited="true" forcerange="-194 194" />
+    <motor name="right_torque2" joint="right_joint2" gear="1" ctrllimited="true" ctrlrange="-194 194" forcelimited="true" forcerange="-194 194" />
+    <motor name="right_torque3" joint="right_joint3" gear="1" ctrllimited="true" ctrlrange="-102 102" forcelimited="true" forcerange="-102 102" />
+    <motor name="right_torque4" joint="right_joint4" gear="1" ctrllimited="true" ctrlrange="-66 66" forcelimited="true" forcerange="-66 66" />
+    <motor name="right_torque5" joint="right_joint5" gear="1" ctrllimited="true" ctrlrange="-66 66" forcelimited="true" forcerange="-66 66" />
+    <motor name="right_torque6" joint="right_joint6" gear="1" ctrllimited="true" ctrlrange="-29 29" forcelimited="true" forcerange="-29 29" />
+  </actuator>
+  <equality>
+    <weld name="left_rigid_grasp" body1="left_link6" body2="payload" relpose="0 4.44089209850063e-17 0.3 0.707106781186548 0.707106781186547 -0 -0" solref="0.002 1" solimp="0.999 0.9999 0.0001" torquescale="0.2" />
+    <weld name="right_rigid_grasp" body1="right_link6" body2="payload" relpose="0 -4.44089209850063e-17 0.3 0.707106781186548 -0.707106781186547 0 0" solref="0.002 1" solimp="0.999 0.9999 0.0001" torquescale="0.2" />
+  </equality>
+  <keyframe>
+    <key name="initial_grasp" qpos="0.562200994349218 1.32909741753935 1.95740275591114 -0.661642407741296 -2.09128783880339 -1.94028283799202 0.562200994349218 1.32909741753935 1.95740275591114 -0.661642407741296 -2.09128783880339 1.20130981559777 0 0 0.65 1 0 0 0" />
+  </keyframe>
+</mujoco>

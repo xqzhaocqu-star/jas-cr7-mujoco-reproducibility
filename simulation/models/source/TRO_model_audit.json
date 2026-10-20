@@ -1,0 +1,220 @@
+{
+  "mujoco_version": "3.12.0",
+  "source_hashes_sha256": {
+    "/home/iot/rokae_ros2_ws/src/rokae_ros2/rokae_description/urdf/xMateCR7.urdf.xacro": "6ccdbe44766438cbbc7d778d3d798d12fbadf6c868d49cf970b040cb922a200d",
+    "/home/iot/rokae_ros2_ws/src/rokae_ros2/rokae_description/meshes/xMateCR7/visual/xMateCR7_base.stl": "bb3050346de453f83f8022807586e20467fae36a87108741e2c4db666edc9553",
+    "/home/iot/rokae_ros2_ws/src/rokae_ros2/rokae_description/meshes/xMateCR7/visual/xMateCR7_link1.stl": "0907827ed9e80de931f6c84eb186bc3956720f2d8c5e0c00c0fd9d5cab5fc36d",
+    "/home/iot/rokae_ros2_ws/src/rokae_ros2/rokae_description/meshes/xMateCR7/visual/xMateCR7_link2.stl": "b6020cc21811bb9600932fd1b6715dce5b126ec1d1f34254b75498e42d0b519f",
+    "/home/iot/rokae_ros2_ws/src/rokae_ros2/rokae_description/meshes/xMateCR7/visual/xMateCR7_link3.stl": "41035c1f9470423e97f9b093388c8a02707b57d77d02d229ea1dbda003e9b501",
+    "/home/iot/rokae_ros2_ws/src/rokae_ros2/rokae_description/meshes/xMateCR7/visual/xMateCR7_link4.stl": "2c17dd7853adb1a2c33d0d04f2850ee4937986f15dbc8ae89121985b0fdab641",
+    "/home/iot/rokae_ros2_ws/src/rokae_ros2/rokae_description/meshes/xMateCR7/visual/xMateCR7_link5.stl": "36b37d6c8a51aa9c4b148b65124810a455ebc2021ca42973cfa7bdac5754cf54",
+    "/home/iot/rokae_ros2_ws/src/rokae_ros2/rokae_description/meshes/xMateCR7/visual/xMateCR7_link6.stl": "498b45c51581e6fb6f8fdeb9cd3d72d36f82711252717725231faa33577f85f1"
+  },
+  "nq": 6,
+  "nv": 6,
+  "nu": 6,
+  "actuator_torque_limits_Nm": [
+    194.0,
+    194.0,
+    102.0,
+    66.0,
+    66.0,
+    29.0
+  ],
+  "joint_position_limits_rad": [
+    [
+      -3.0543,
+      3.0543
+    ],
+    [
+      -3.0543,
+      3.0543
+    ],
+    [
+      -3.0543,
+      3.0543
+    ],
+    [
+      -3.0543,
+      3.0543
+    ],
+    [
+      -3.0543,
+      3.0543
+    ],
+    [
+      -3.0543,
+      3.0543
+    ]
+  ],
+  "joint_velocity_limits_rad_s": [
+    3.141592653589793,
+    3.141592653589793,
+    4.084070449666731,
+    4.1887902047863905,
+    4.1887902047863905,
+    5.235987755982989
+  ],
+  "armature_kg_m2": [
+    0.02,
+    0.02,
+    0.02,
+    0.02,
+    0.02,
+    0.02
+  ],
+  "viscous_damping_Nm_s_rad": [
+    0.05,
+    0.05,
+    0.05,
+    0.05,
+    0.05,
+    0.05
+  ],
+  "mass_properties": [
+    {
+      "name": "xMateCR7_base",
+      "mass_kg": 3.44074938,
+      "com_body_frame_m": [
+        -0.011830067905454109,
+        0.002043592036239354,
+        0.05233457548225072
+      ],
+      "principal_inertia_kg_m2": [
+        0.026953176670320947,
+        0.01871935166676484,
+        0.015511007149955377
+      ],
+      "principal_frame_quaternion_wxyz": [
+        0.011960247073014352,
+        0.6957962642286727,
+        -0.0011157572581129704,
+        0.7181387513991433
+      ]
+    },
+    {
+      "name": "xMateCR7_link1",
+      "mass_kg": 3.44074938,
+      "com_body_frame_m": [
+        1.7351980986870776e-07,
+        0.013388164484580327,
+        0.23651659575423697
+      ],
+      "principal_inertia_kg_m2": [
+        0.021145228761201285,
+        0.0207439831004919,
+        0.01106864904188281
+      ],
+      "principal_frame_quaternion_wxyz": [
+        0.9955529132042713,
+        -0.09420401579371367,
+        -1.9279081325021182e-06,
+        -2.0374232897943713e-05
+      ]
+    },
+    {
+      "name": "xMateCR7_link2",
+      "mass_kg": 5.024380503,
+      "com_body_frame_m": [
+        1.0149287933920238e-07,
+        0.1605686769546938,
+        0.2203052240335847
+      ],
+      "principal_inertia_kg_m2": [
+        0.15343527030993134,
+        0.1502544533435595,
+        0.01582431651170926
+      ],
+      "principal_frame_quaternion_wxyz": [
+        0.9999928825131059,
+        0.0037729197088546182,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "xMateCR7_link3",
+      "mass_kg": 2.439584706,
+      "com_body_frame_m": [
+        9.449745304894813e-07,
+        0.020879899511394247,
+        0.04658872329105842
+      ],
+      "principal_inertia_kg_m2": [
+        0.01036682713028878,
+        0.009522831850589115,
+        0.004669542973028761
+      ],
+      "principal_frame_quaternion_wxyz": [
+        0.990314575862871,
+        0.13884178202115907,
+        1.139699212146228e-05,
+        1.6396322655970918e-05
+      ]
+    },
+    {
+      "name": "xMateCR7_link4",
+      "mass_kg": 2.439584706,
+      "com_body_frame_m": [
+        -6.256248696830977e-07,
+        -0.01349855481284527,
+        -0.07539763811877231
+      ],
+      "principal_inertia_kg_m2": [
+        0.014969739000397818,
+        0.014307249391271565,
+        0.0042679301409699775
+      ],
+      "principal_frame_quaternion_wxyz": [
+        0.9983861173820001,
+        0.056790487681420074,
+        2.1638919836825726e-07,
+        -3.358205415817267e-05
+      ]
+    },
+    {
+      "name": "xMateCR7_link5",
+      "mass_kg": 2.422757896,
+      "com_body_frame_m": [
+        -6.623354124921633e-05,
+        0.012122988789153433,
+        -0.013732098142306592
+      ],
+      "principal_inertia_kg_m2": [
+        0.009384258608171528,
+        0.008768975431820623,
+        0.0041918282156378954
+      ],
+      "principal_frame_quaternion_wxyz": [
+        0.9999231010568483,
+        -0.01218887904247663,
+        0.0004972636871370115,
+        -0.0022306791273109102
+      ]
+    },
+    {
+      "name": "xMateCR7_link6",
+      "mass_kg": 1.229800857,
+      "com_body_frame_m": [
+        -1.3373087480537824e-06,
+        -6.333262430992417e-07,
+        -0.02755454837649249
+      ],
+      "principal_inertia_kg_m2": [
+        0.001611608448404218,
+        0.001073575151079027,
+        0.001073506229165718
+      ],
+      "principal_frame_quaternion_wxyz": [
+        0.500003844531735,
+        0.4999961554387053,
+        -0.4999961554387053,
+        0.500003844531735
+      ]
+    }
+  ],
+  "self_collision": "disabled by bit masks, including tool-to-arm; all arm and tool geometry remains enabled against all physical environment geometry",
+  "limits_note": "MuJoCo torque and position limits enforced; joint speed values are metadata for external monitoring, not hard velocity constraints",
+  "geometry_mass_method": "Uniform-density convex hull per supplied STL, original URDF scalar mass retained; hardware inertias are not identified.",
+  "scope": "Shared CR7 robot provenance and inertia only. Physical tool and confined task are specified by confined_model_audit.json."
+}

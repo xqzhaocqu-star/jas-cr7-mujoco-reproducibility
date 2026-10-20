@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+simulation/results*/
+*.npz
+*.mp4
+*.log
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+manuscript_figures/

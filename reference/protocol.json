@@ -1,0 +1,706 @@
+{
+  "schema_version": 1,
+  "description": "Full original JAS, four structural ablations and an independent complete cooperative PPC protocol",
+  "settings": {
+    "chi": [
+      20.0,
+      20.0,
+      20.0,
+      8.0,
+      8.0,
+      8.0
+    ],
+    "ell": [
+      50.0,
+      50.0,
+      50.0,
+      20.0,
+      20.0,
+      20.0
+    ],
+    "lam1": 0.8,
+    "lam2": 0.8,
+    "alpha": 0.5,
+    "beta": 1.5,
+    "delta": 0.0005,
+    "ka": [
+      6.0,
+      6.0,
+      6.0,
+      0.02,
+      0.02,
+      0.02
+    ],
+    "k2": [
+      3.0,
+      3.0,
+      3.0,
+      0.01,
+      0.01,
+      0.01
+    ],
+    "k3": [
+      1.0,
+      1.0,
+      1.0,
+      0.005,
+      0.005,
+      0.005
+    ],
+    "upsilon1": 1.5,
+    "upsilon2": 0.5,
+    "prior_lower": 0.85,
+    "prior_upper": 1.15,
+    "filter_rate": 16.0,
+    "window": 6.0,
+    "omega": 0.005,
+    "adaptation_gain": [
+      28.999190131219716,
+      0.00033977480670533647,
+      0.00031000145730544553,
+      0.00038526809372251003,
+      0.0003903413503538279,
+      0.0016730795990336901,
+      3.552331704227484,
+      0.0029379093710310395
+    ],
+    "gamma": 1.0,
+    "internal_force": 5.0,
+    "rho_hat": 1e-08,
+    "robust_mode": "paper_sign",
+    "robust_width": 0.05,
+    "learning_integrator": "explicit_euler",
+    "excitation_profile": "moderate",
+    "excitation_duration": 20.0,
+    "method": "proposed",
+    "linear_surface_gain": [
+      10.090079323512306,
+      12.533725886493267,
+      11.385555932728053,
+      7.254450727277798,
+      8.940694122402691,
+      7.975665135294944
+    ],
+    "evaluation_initial_upper": [
+      0.08,
+      0.07,
+      0.07,
+      0.22,
+      0.2,
+      0.22
+    ],
+    "evaluation_initial_lower": [
+      0.09,
+      0.07,
+      0.08,
+      0.25,
+      0.2,
+      0.23
+    ],
+    "evaluation_transition_s": 1.0,
+    "log_bf_scale": []
+  },
+  "external_settings": {
+    "gs": 0.03,
+    "gv": 200.0,
+    "rho_s_initial": [
+      0.08,
+      0.08,
+      0.08,
+      0.22,
+      0.2,
+      0.22
+    ],
+    "rho_s_final": [
+      0.012,
+      0.01,
+      0.01,
+      0.045,
+      0.04,
+      0.035
+    ],
+    "rho_s_rate": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "rho_v_initial": [
+      2.0,
+      2.0,
+      2.0,
+      3.0,
+      20.0,
+      3.0
+    ],
+    "rho_v_final": [
+      0.4,
+      0.4,
+      0.4,
+      2.0,
+      18.0,
+      2.0
+    ],
+    "rho_v_rate": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "velocity_initial_slack": 1.0,
+    "desired_pitch_max": 0.35,
+    "virtual_mass": 1.0,
+    "virtual_inertia": 1.0,
+    "grasp_positions_object": [
+      [
+        0.0,
+        -0.2,
+        0.0
+      ],
+      [
+        0.0,
+        0.2,
+        0.0
+      ]
+    ]
+  },
+  "control_dt_s": 0.0005,
+  "physics_dt_s": 0.000125,
+  "integrator": "RK4",
+  "calibration": {
+    "source": "Nominal zero-velocity initial offset only; no plant truth",
+    "linear_surface_gain": "g(xi0)/xi0, held fixed for every trial",
+    "log_bf_scale": "matches original dxi/de at e=0,t=0, fixed thereafter"
+  },
+  "common_boundary_note": "During [0,1) s a common finite assessment bound is extra to the proposed native BF guarantee. From 1 s every JAS-based native/assessment boundary coincides except the log coordinate formula.",
+  "evaluation": {
+    "position_tolerance_m": 0.00025,
+    "orientation_coordinate_tolerance_rad": 0.0008726646259971648,
+    "surface_component_abs": 0.001,
+    "hold_s": 2.0,
+    "tolerance_multipliers": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "failed_or_unsettled": "Retain outcome and right censor; never remove from denominator"
+  },
+  "scenarios": [
+    {
+      "id": "nominal",
+      "study": "main",
+      "duration_s": 24.0,
+      "reference_profile": "moderate",
+      "excitation_duration": 20.0,
+      "nonmonotonic": false,
+      "offset": [
+        -0.015,
+        0.01,
+        -0.012,
+        -0.03,
+        0.02,
+        -0.025
+      ],
+      "preflight": {
+        "minimum_jacobian_sigma": 0.1587190909013414,
+        "joint_limit_margin_rad": 0.9632372801188951,
+        "initial_common_margin": 0.8333333333333334,
+        "initial_grasp_residual": 6.1067103571943074e-15
+      }
+    },
+    {
+      "id": "nonmonotonic",
+      "study": "main",
+      "duration_s": 24.0,
+      "reference_profile": "moderate",
+      "excitation_duration": 20.0,
+      "nonmonotonic": true,
+      "offset": [
+        -0.015,
+        0.01,
+        -0.012,
+        -0.03,
+        0.02,
+        -0.025
+      ],
+      "preflight": {
+        "minimum_jacobian_sigma": 0.1587190909013414,
+        "joint_limit_margin_rad": 0.9632372801188951,
+        "initial_common_margin": 0.8333333333333334,
+        "initial_grasp_residual": 6.1067103571943074e-15
+      }
+    },
+    {
+      "id": "large_initial_error",
+      "study": "main",
+      "duration_s": 24.0,
+      "reference_profile": "moderate",
+      "excitation_duration": 20.0,
+      "nonmonotonic": false,
+      "offset": [
+        -0.045,
+        0.03,
+        -0.035,
+        -0.07,
+        0.05,
+        -0.06
+      ],
+      "preflight": {
+        "minimum_jacobian_sigma": 0.1445789267337397,
+        "joint_limit_margin_rad": 0.914952892407987,
+        "initial_common_margin": 0.5000000000000001,
+        "initial_grasp_residual": 1.3809506140762375e-15
+      }
+    },
+    {
+      "id": "initial_01",
+      "study": "initial_sweep",
+      "duration_s": 8.0,
+      "reference_profile": "hold",
+      "nonmonotonic": false,
+      "offset": [
+        0.01125,
+        -0.0075,
+        0.00875,
+        0.0175,
+        -0.0125,
+        0.015
+      ],
+      "initial_scale": -0.25,
+      "preflight": {
+        "minimum_jacobian_sigma": 0.15019908385697223,
+        "joint_limit_margin_rad": 0.9180472749613307,
+        "initial_common_margin": 0.8593750000000001,
+        "initial_grasp_residual": 1.4601807214426194e-15
+      }
+    },
+    {
+      "id": "initial_02",
+      "study": "initial_sweep",
+      "duration_s": 8.0,
+      "reference_profile": "hold",
+      "nonmonotonic": false,
+      "offset": [
+        -0.01125,
+        0.0075,
+        -0.00875,
+        -0.0175,
+        0.0125,
+        -0.015
+      ],
+      "initial_scale": 0.25,
+      "preflight": {
+        "minimum_jacobian_sigma": 0.15896118209551552,
+        "joint_limit_margin_rad": 0.9545579834479976,
+        "initial_common_margin": 0.8750000000000001,
+        "initial_grasp_residual": 1.2033131526742557e-15
+      }
+    },
+    {
+      "id": "initial_03",
+      "study": "initial_sweep",
+      "duration_s": 8.0,
+      "reference_profile": "hold",
+      "nonmonotonic": false,
+      "offset": [
+        0.0225,
+        -0.015,
+        0.0175,
+        0.035,
+        -0.025,
+        0.03
+      ],
+      "initial_scale": -0.5,
+      "preflight": {
+        "minimum_jacobian_sigma": 0.1369553484184923,
+        "joint_limit_margin_rad": 0.87044549272176,
+        "initial_common_margin": 0.7187500000000001,
+        "initial_grasp_residual": 1.3204156244191902e-15
+      }
+    },
+    {
+      "id": "initial_04",
+      "study": "initial_sweep",
+      "duration_s": 8.0,
+      "reference_profile": "hold",
+      "nonmonotonic": false,
+      "offset": [
+        -0.0225,
+        0.015,
+        -0.0175,
+        -0.035,
+        0.025,
+        -0.03
+      ],
+      "initial_scale": 0.5,
+      "preflight": {
+        "minimum_jacobian_sigma": 0.15428013243430835,
+        "joint_limit_margin_rad": 0.944935839996349,
+        "initial_common_margin": 0.75,
+        "initial_grasp_residual": 1.4012556527838899e-14
+      }
+    },
+    {
+      "id": "initial_05",
+      "study": "initial_sweep",
+      "duration_s": 8.0,
+      "reference_profile": "hold",
+      "nonmonotonic": false,
+      "offset": [
+        0.045,
+        -0.03,
+        0.035,
+        0.07,
+        -0.05,
+        0.06
+      ],
+      "initial_scale": -1.0,
+      "preflight": {
+        "minimum_jacobian_sigma": 0.11007822073432573,
+        "joint_limit_margin_rad": 0.7693699927431741,
+        "initial_common_margin": 0.43750000000000033,
+        "initial_grasp_residual": 1.2425140458513563e-15
+      }
+    },
+    {
+      "id": "initial_06",
+      "study": "initial_sweep",
+      "duration_s": 8.0,
+      "reference_profile": "hold",
+      "nonmonotonic": false,
+      "offset": [
+        -0.045,
+        0.03,
+        -0.035,
+        -0.07,
+        0.05,
+        -0.06
+      ],
+      "initial_scale": 1.0,
+      "preflight": {
+        "minimum_jacobian_sigma": 0.1445789267337397,
+        "joint_limit_margin_rad": 0.914952892407987,
+        "initial_common_margin": 0.5000000000000001,
+        "initial_grasp_residual": 1.3809506140762375e-15
+      }
+    },
+    {
+      "id": "initial_07",
+      "study": "initial_sweep",
+      "duration_s": 8.0,
+      "reference_profile": "hold",
+      "nonmonotonic": false,
+      "offset": [
+        0.0675,
+        -0.045,
+        0.052500000000000005,
+        0.10500000000000001,
+        -0.07500000000000001,
+        0.09
+      ],
+      "initial_scale": -1.5,
+      "preflight": {
+        "minimum_jacobian_sigma": 0.08037355187103828,
+        "joint_limit_margin_rad": 0.6672653763047585,
+        "initial_common_margin": 0.1562500000000004,
+        "initial_grasp_residual": 1.115117873798719e-15
+      }
+    },
+    {
+      "id": "initial_08",
+      "study": "initial_sweep",
+      "duration_s": 8.0,
+      "reference_profile": "hold",
+      "nonmonotonic": false,
+      "offset": [
+        -0.0675,
+        0.045,
+        -0.052500000000000005,
+        -0.10500000000000001,
+        0.07500000000000001,
+        -0.09
+      ],
+      "initial_scale": 1.5,
+      "preflight": {
+        "minimum_jacobian_sigma": 0.1344780163431045,
+        "joint_limit_margin_rad": 0.8241457812085748,
+        "initial_common_margin": 0.25000000000000006,
+        "initial_grasp_residual": 1.266633964020239e-15
+      }
+    }
+  ],
+  "trials": [
+    {
+      "id": "nominal__proposed",
+      "method": "proposed",
+      "scenario": "nominal",
+      "path": "main/nominal/proposed"
+    },
+    {
+      "id": "nominal__traditional_bf",
+      "method": "traditional_bf",
+      "scenario": "nominal",
+      "path": "main/nominal/traditional_bf"
+    },
+    {
+      "id": "nominal__linear_surface",
+      "method": "linear_surface",
+      "scenario": "nominal",
+      "path": "main/nominal/linear_surface"
+    },
+    {
+      "id": "nominal__linear_reaching",
+      "method": "linear_reaching",
+      "scenario": "nominal",
+      "path": "main/nominal/linear_reaching"
+    },
+    {
+      "id": "nominal__no_history",
+      "method": "no_history",
+      "scenario": "nominal",
+      "path": "main/nominal/no_history"
+    },
+    {
+      "id": "nominal__external_ppc",
+      "method": "external_ppc",
+      "scenario": "nominal",
+      "path": "main/nominal/external_ppc"
+    },
+    {
+      "id": "nonmonotonic__proposed",
+      "method": "proposed",
+      "scenario": "nonmonotonic",
+      "path": "main/nonmonotonic/proposed"
+    },
+    {
+      "id": "nonmonotonic__traditional_bf",
+      "method": "traditional_bf",
+      "scenario": "nonmonotonic",
+      "path": "main/nonmonotonic/traditional_bf"
+    },
+    {
+      "id": "nonmonotonic__linear_surface",
+      "method": "linear_surface",
+      "scenario": "nonmonotonic",
+      "path": "main/nonmonotonic/linear_surface"
+    },
+    {
+      "id": "nonmonotonic__linear_reaching",
+      "method": "linear_reaching",
+      "scenario": "nonmonotonic",
+      "path": "main/nonmonotonic/linear_reaching"
+    },
+    {
+      "id": "nonmonotonic__no_history",
+      "method": "no_history",
+      "scenario": "nonmonotonic",
+      "path": "main/nonmonotonic/no_history"
+    },
+    {
+      "id": "nonmonotonic__external_ppc",
+      "method": "external_ppc",
+      "scenario": "nonmonotonic",
+      "path": "main/nonmonotonic/external_ppc"
+    },
+    {
+      "id": "large_initial_error__proposed",
+      "method": "proposed",
+      "scenario": "large_initial_error",
+      "path": "main/large_initial_error/proposed"
+    },
+    {
+      "id": "large_initial_error__traditional_bf",
+      "method": "traditional_bf",
+      "scenario": "large_initial_error",
+      "path": "main/large_initial_error/traditional_bf"
+    },
+    {
+      "id": "large_initial_error__linear_surface",
+      "method": "linear_surface",
+      "scenario": "large_initial_error",
+      "path": "main/large_initial_error/linear_surface"
+    },
+    {
+      "id": "large_initial_error__linear_reaching",
+      "method": "linear_reaching",
+      "scenario": "large_initial_error",
+      "path": "main/large_initial_error/linear_reaching"
+    },
+    {
+      "id": "large_initial_error__no_history",
+      "method": "no_history",
+      "scenario": "large_initial_error",
+      "path": "main/large_initial_error/no_history"
+    },
+    {
+      "id": "large_initial_error__external_ppc",
+      "method": "external_ppc",
+      "scenario": "large_initial_error",
+      "path": "main/large_initial_error/external_ppc"
+    },
+    {
+      "id": "initial_01__proposed",
+      "method": "proposed",
+      "scenario": "initial_01",
+      "path": "initial_sweep/initial_01/proposed"
+    },
+    {
+      "id": "initial_01__linear_surface",
+      "method": "linear_surface",
+      "scenario": "initial_01",
+      "path": "initial_sweep/initial_01/linear_surface"
+    },
+    {
+      "id": "initial_01__linear_reaching",
+      "method": "linear_reaching",
+      "scenario": "initial_01",
+      "path": "initial_sweep/initial_01/linear_reaching"
+    },
+    {
+      "id": "initial_02__proposed",
+      "method": "proposed",
+      "scenario": "initial_02",
+      "path": "initial_sweep/initial_02/proposed"
+    },
+    {
+      "id": "initial_02__linear_surface",
+      "method": "linear_surface",
+      "scenario": "initial_02",
+      "path": "initial_sweep/initial_02/linear_surface"
+    },
+    {
+      "id": "initial_02__linear_reaching",
+      "method": "linear_reaching",
+      "scenario": "initial_02",
+      "path": "initial_sweep/initial_02/linear_reaching"
+    },
+    {
+      "id": "initial_03__proposed",
+      "method": "proposed",
+      "scenario": "initial_03",
+      "path": "initial_sweep/initial_03/proposed"
+    },
+    {
+      "id": "initial_03__linear_surface",
+      "method": "linear_surface",
+      "scenario": "initial_03",
+      "path": "initial_sweep/initial_03/linear_surface"
+    },
+    {
+      "id": "initial_03__linear_reaching",
+      "method": "linear_reaching",
+      "scenario": "initial_03",
+      "path": "initial_sweep/initial_03/linear_reaching"
+    },
+    {
+      "id": "initial_04__proposed",
+      "method": "proposed",
+      "scenario": "initial_04",
+      "path": "initial_sweep/initial_04/proposed"
+    },
+    {
+      "id": "initial_04__linear_surface",
+      "method": "linear_surface",
+      "scenario": "initial_04",
+      "path": "initial_sweep/initial_04/linear_surface"
+    },
+    {
+      "id": "initial_04__linear_reaching",
+      "method": "linear_reaching",
+      "scenario": "initial_04",
+      "path": "initial_sweep/initial_04/linear_reaching"
+    },
+    {
+      "id": "initial_05__proposed",
+      "method": "proposed",
+      "scenario": "initial_05",
+      "path": "initial_sweep/initial_05/proposed"
+    },
+    {
+      "id": "initial_05__linear_surface",
+      "method": "linear_surface",
+      "scenario": "initial_05",
+      "path": "initial_sweep/initial_05/linear_surface"
+    },
+    {
+      "id": "initial_05__linear_reaching",
+      "method": "linear_reaching",
+      "scenario": "initial_05",
+      "path": "initial_sweep/initial_05/linear_reaching"
+    },
+    {
+      "id": "initial_06__proposed",
+      "method": "proposed",
+      "scenario": "initial_06",
+      "path": "initial_sweep/initial_06/proposed"
+    },
+    {
+      "id": "initial_06__linear_surface",
+      "method": "linear_surface",
+      "scenario": "initial_06",
+      "path": "initial_sweep/initial_06/linear_surface"
+    },
+    {
+      "id": "initial_06__linear_reaching",
+      "method": "linear_reaching",
+      "scenario": "initial_06",
+      "path": "initial_sweep/initial_06/linear_reaching"
+    },
+    {
+      "id": "initial_07__proposed",
+      "method": "proposed",
+      "scenario": "initial_07",
+      "path": "initial_sweep/initial_07/proposed"
+    },
+    {
+      "id": "initial_07__linear_surface",
+      "method": "linear_surface",
+      "scenario": "initial_07",
+      "path": "initial_sweep/initial_07/linear_surface"
+    },
+    {
+      "id": "initial_07__linear_reaching",
+      "method": "linear_reaching",
+      "scenario": "initial_07",
+      "path": "initial_sweep/initial_07/linear_reaching"
+    },
+    {
+      "id": "initial_08__proposed",
+      "method": "proposed",
+      "scenario": "initial_08",
+      "path": "initial_sweep/initial_08/proposed"
+    },
+    {
+      "id": "initial_08__linear_surface",
+      "method": "linear_surface",
+      "scenario": "initial_08",
+      "path": "initial_sweep/initial_08/linear_surface"
+    },
+    {
+      "id": "initial_08__linear_reaching",
+      "method": "linear_reaching",
+      "scenario": "initial_08",
+      "path": "initial_sweep/initial_08/linear_reaching"
+    },
+    {
+      "id": "refinement__proposed",
+      "method": "proposed",
+      "scenario": "nominal",
+      "path": "step_refinement/nominal/proposed",
+      "control_dt_s": 0.00025,
+      "physics_dt_s": 6.25e-05
+    },
+    {
+      "id": "refinement__external_ppc",
+      "method": "external_ppc",
+      "scenario": "nominal",
+      "path": "step_refinement/nominal/external_ppc",
+      "control_dt_s": 0.00025,
+      "physics_dt_s": 6.25e-05
+    }
+  ]
+}

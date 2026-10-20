@@ -1,0 +1,10 @@
+{
+  "simulation/validate_comparison.py": "Only provenance dependency renamed from private manuscript to REPRODUCIBILITY.md.",
+  "simulation/run_comparison.py": "Only provenance dependency renamed from private manuscript to REPRODUCIBILITY.md.",
+  "source_integrity": {
+    "unchanged_original_python_files": 56,
+    "changed_original_python_files": 2,
+    "all_10_model_asset_hashes_match": true,
+    "generated_protocol_json_matches_registered_settings_and_44_trials": true
+  }
+}

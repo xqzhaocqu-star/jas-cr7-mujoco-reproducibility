@@ -1,0 +1,867 @@
+{
+  "method": "proposed",
+  "case": "nominal",
+  "scenario": {
+    "id": "nominal",
+    "study": "main",
+    "duration_s": 24.0,
+    "reference_profile": "moderate",
+    "excitation_duration": 20.0,
+    "nonmonotonic": false,
+    "offset": [
+      -0.015,
+      0.01,
+      -0.012,
+      -0.03,
+      0.02,
+      -0.025
+    ],
+    "preflight": {
+      "minimum_jacobian_sigma": 0.1587190909013414,
+      "joint_limit_margin_rad": 0.9632372801188951,
+      "initial_common_margin": 0.8333333333333334,
+      "initial_grasp_residual": 6.1067103571943074e-15
+    }
+  },
+  "scenario_id": "nominal",
+  "requested_duration_s": 24.0,
+  "duration_s": 24.0,
+  "actual_end_s": 24.0,
+  "run_status": "completed",
+  "termination_reason": null,
+  "termination_stage": null,
+  "failed_attempt_time_s": null,
+  "initial_offset": [
+    -0.015,
+    0.01,
+    -0.012,
+    -0.03,
+    0.02,
+    -0.025
+  ],
+  "initial_object_pose": [
+    -0.015,
+    0.01,
+    0.638,
+    -0.03,
+    0.02,
+    -0.025
+  ],
+  "has_adaptation": true,
+  "control_dt_s": 0.0005,
+  "physics_dt_s": 0.000125,
+  "integrator": "RK4",
+  "settings": {
+    "chi": [
+      20.0,
+      20.0,
+      20.0,
+      8.0,
+      8.0,
+      8.0
+    ],
+    "ell": [
+      50.0,
+      50.0,
+      50.0,
+      20.0,
+      20.0,
+      20.0
+    ],
+    "lam1": 0.8,
+    "lam2": 0.8,
+    "alpha": 0.5,
+    "beta": 1.5,
+    "delta": 0.0005,
+    "ka": [
+      6.0,
+      6.0,
+      6.0,
+      0.02,
+      0.02,
+      0.02
+    ],
+    "k2": [
+      3.0,
+      3.0,
+      3.0,
+      0.01,
+      0.01,
+      0.01
+    ],
+    "k3": [
+      1.0,
+      1.0,
+      1.0,
+      0.005,
+      0.005,
+      0.005
+    ],
+    "upsilon1": 1.5,
+    "upsilon2": 0.5,
+    "prior_lower": 0.85,
+    "prior_upper": 1.15,
+    "filter_rate": 16.0,
+    "window": 6.0,
+    "omega": 0.005,
+    "adaptation_gain": [
+      28.999190131219716,
+      0.00033977480670533647,
+      0.00031000145730544553,
+      0.00038526809372251003,
+      0.0003903413503538279,
+      0.0016730795990336901,
+      3.552331704227484,
+      0.0029379093710310395
+    ],
+    "gamma": 1.0,
+    "internal_force": 5.0,
+    "rho_hat": 1e-08,
+    "robust_mode": "paper_sign",
+    "robust_width": 0.05,
+    "learning_integrator": "explicit_euler",
+    "excitation_profile": "moderate",
+    "excitation_duration": 20.0,
+    "method": "proposed",
+    "linear_surface_gain": [
+      10.090079323512306,
+      12.533725886493267,
+      11.385555932728053,
+      7.254450727277798,
+      8.940694122402691,
+      7.975665135294944
+    ],
+    "evaluation_initial_upper": [
+      0.08,
+      0.07,
+      0.07,
+      0.22,
+      0.2,
+      0.22
+    ],
+    "evaluation_initial_lower": [
+      0.09,
+      0.07,
+      0.08,
+      0.25,
+      0.2,
+      0.23
+    ],
+    "evaluation_transition_s": 1.0,
+    "log_bf_scale": []
+  },
+  "external_settings": {
+    "gs": 0.03,
+    "gv": 200.0,
+    "rho_s_initial": [
+      0.08,
+      0.08,
+      0.08,
+      0.22,
+      0.2,
+      0.22
+    ],
+    "rho_s_final": [
+      0.012,
+      0.01,
+      0.01,
+      0.045,
+      0.04,
+      0.035
+    ],
+    "rho_s_rate": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "rho_v_initial": [
+      2.0,
+      2.0,
+      2.0,
+      3.0,
+      20.0,
+      3.0
+    ],
+    "rho_v_final": [
+      0.4,
+      0.4,
+      0.4,
+      2.0,
+      18.0,
+      2.0
+    ],
+    "rho_v_rate": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "velocity_initial_slack": 1.0,
+    "desired_pitch_max": 0.35,
+    "virtual_mass": 1.0,
+    "virtual_inertia": 1.0,
+    "grasp_positions_object": [
+      [
+        0.0,
+        -0.2,
+        0.0
+      ],
+      [
+        0.0,
+        0.2,
+        0.0
+      ]
+    ]
+  },
+  "controller_configurations": [
+    {
+      "chi": [
+        20.0,
+        20.0,
+        20.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "ell": [
+        50.0,
+        50.0,
+        50.0,
+        20.0,
+        20.0,
+        20.0
+      ],
+      "lam1": 0.8,
+      "lam2": 0.8,
+      "alpha": 0.5,
+      "beta": 1.5,
+      "delta": 0.0005,
+      "ka": [
+        6.0,
+        6.0,
+        6.0,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "k2": [
+        3.0,
+        3.0,
+        3.0,
+        0.01,
+        0.01,
+        0.01
+      ],
+      "k3": [
+        1.0,
+        1.0,
+        1.0,
+        0.005,
+        0.005,
+        0.005
+      ],
+      "upsilon1": 1.5,
+      "upsilon2": 0.5,
+      "prior_lower": 0.85,
+      "prior_upper": 1.15,
+      "filter_rate": 16.0,
+      "window": 6.0,
+      "omega": 0.005,
+      "adaptation_gain": [
+        28.999190131219716,
+        0.00033977480670533647,
+        0.00031000145730544553,
+        0.00038526809372251003,
+        0.0003903413503538279,
+        0.0016730795990336901,
+        3.552331704227484,
+        0.0029379093710310395
+      ],
+      "gamma": 1.0,
+      "internal_force": 5.0,
+      "rho_hat": 1e-08,
+      "robust_mode": "paper_sign",
+      "robust_width": 0.05,
+      "learning_integrator": "explicit_euler",
+      "excitation_profile": "moderate",
+      "excitation_duration": 20.0,
+      "method": "proposed",
+      "linear_surface_gain": [
+        10.090079323512306,
+        12.533725886493267,
+        11.385555932728053,
+        7.254450727277798,
+        8.940694122402691,
+        7.975665135294944
+      ],
+      "evaluation_initial_upper": [
+        0.08,
+        0.07,
+        0.07,
+        0.22,
+        0.2,
+        0.22
+      ],
+      "evaluation_initial_lower": [
+        0.09,
+        0.07,
+        0.08,
+        0.25,
+        0.2,
+        0.23
+      ],
+      "evaluation_transition_s": 1.0,
+      "log_bf_scale": []
+    },
+    {
+      "chi": [
+        20.0,
+        20.0,
+        20.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "ell": [
+        50.0,
+        50.0,
+        50.0,
+        20.0,
+        20.0,
+        20.0
+      ],
+      "lam1": 0.8,
+      "lam2": 0.8,
+      "alpha": 0.5,
+      "beta": 1.5,
+      "delta": 0.0005,
+      "ka": [
+        6.0,
+        6.0,
+        6.0,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "k2": [
+        3.0,
+        3.0,
+        3.0,
+        0.01,
+        0.01,
+        0.01
+      ],
+      "k3": [
+        1.0,
+        1.0,
+        1.0,
+        0.005,
+        0.005,
+        0.005
+      ],
+      "upsilon1": 1.5,
+      "upsilon2": 0.5,
+      "prior_lower": 0.85,
+      "prior_upper": 1.15,
+      "filter_rate": 16.0,
+      "window": 6.0,
+      "omega": 0.005,
+      "adaptation_gain": [
+        28.999190131219716,
+        0.00033977480670533647,
+        0.00031000145730544553,
+        0.00038526809372251003,
+        0.0003903413503538279,
+        0.0016730795990336901,
+        3.552331704227484,
+        0.0029379093710310395
+      ],
+      "gamma": 1.0,
+      "internal_force": 5.0,
+      "rho_hat": 1e-08,
+      "robust_mode": "paper_sign",
+      "robust_width": 0.05,
+      "learning_integrator": "explicit_euler",
+      "excitation_profile": "moderate",
+      "excitation_duration": 20.0,
+      "method": "proposed",
+      "linear_surface_gain": [
+        10.090079323512306,
+        12.533725886493267,
+        11.385555932728053,
+        7.254450727277798,
+        8.940694122402691,
+        7.975665135294944
+      ],
+      "evaluation_initial_upper": [
+        0.08,
+        0.07,
+        0.07,
+        0.22,
+        0.2,
+        0.22
+      ],
+      "evaluation_initial_lower": [
+        0.09,
+        0.07,
+        0.08,
+        0.25,
+        0.2,
+        0.23
+      ],
+      "evaluation_transition_s": 1.0,
+      "log_bf_scale": []
+    }
+  ],
+  "wall_seconds": 336.02885621227324,
+  "algorithm_variant": "Complete original JAS sign controller and composite learning",
+  "comparison_boundary_note": "Common finite C2 assessment envelope during first second; proposed internal envelope remains original with mu(0)=ell. Bounds coincide from t=1 s.",
+  "sensing": "Local encoders and actual held motor torque. No reaction forces, qacc or truth enter control/learning.",
+  "minimum_joint_limit_margin_rad": 0.5694408270811007,
+  "max_joint_speed_limit_ratio": 0.7978721205790281,
+  "max_contact_count": 0,
+  "mujoco_warnings": {},
+  "true_parameters_offline_only": [
+    [
+      0.94,
+      1.06,
+      1.04,
+      0.97,
+      1.05,
+      0.96,
+      0.98,
+      1.08
+    ],
+    [
+      1.06,
+      0.94,
+      0.96,
+      1.03,
+      0.95,
+      1.04,
+      1.04,
+      1.08
+    ]
+  ],
+  "ie_detection_times_s": [
+    6.0,
+    6.0
+  ],
+  "final_parameter_error_norms": [
+    0.18857837778210756,
+    0.2601964013135084
+  ],
+  "numerical_projection_counts": [
+    2,
+    4
+  ],
+  "stored_learning_residual_norms": [
+    219.27287059986605,
+    97.21906985838903
+  ],
+  "phase_entry_thresholds": {
+    "position_m": 0.00025,
+    "orientation_rad": 0.0008726646259971648,
+    "surface_component_abs": 0.001,
+    "xi_component_abs": 0.0005,
+    "hold_s": 2.0
+  },
+  "jas_phase_criteria_applicable": true,
+  "claim_limit": "Finite physical-domain and discrete-sample comparison; no empirical claim of global fixed time or zero parameter-error limit.",
+  "tracking_entry": {
+    "position_entry_s": 1.3995,
+    "orientation_coordinate_entry_s": 7.4275,
+    "simultaneous_entry_s": 7.4275,
+    "componentwise_entry_s": [
+      1.395,
+      1.0010000000000001,
+      0.2465,
+      0.317,
+      7.4270000000000005,
+      1.212
+    ],
+    "thresholds": {
+      "position_norm_m": 0.00025,
+      "orientation_coordinate_norm_rad": 0.0008726646259971648
+    },
+    "hold_s": 2.0,
+    "completed": true,
+    "interpretation": "First saved time after which all saved samples satisfy the criterion until the requested end, for at least hold_s; orientation uses Euler-coordinate error norm."
+  },
+  "surface_entry_s": null,
+  "xi_layer_entry_s": 18.841,
+  "torque_metrics": {
+    "samples": 48001,
+    "all_finite": true,
+    "raw_command_rms_Nm": [
+      5.40720926681424,
+      44.91654065671052,
+      14.160588980178238,
+      5.439456278589137,
+      5.518757101227649,
+      0.03335744149219145,
+      5.24230304950653,
+      42.54402224126831,
+      13.868122865294021,
+      5.189188506021388,
+      5.179192256509588,
+      0.033889606877075
+    ],
+    "applied_rms_Nm": [
+      5.40720926681424,
+      44.91654065671052,
+      14.160588980178238,
+      5.439456278589137,
+      5.518757101227649,
+      0.03335744149219145,
+      5.24230304950653,
+      42.54402224126831,
+      13.868122865294021,
+      5.189188506021388,
+      5.179192256509588,
+      0.033889606877075
+    ],
+    "raw_command_peak_abs_Nm": [
+      28.902637849825325,
+      77.47245803060508,
+      26.084848541785718,
+      8.547356364905413,
+      7.901790416056991,
+      0.18122717619782813,
+      28.68757451657393,
+      71.87638169174379,
+      24.997589705210416,
+      8.79140261804432,
+      7.537785916636085,
+      0.195620570912033
+    ],
+    "applied_peak_abs_Nm": [
+      28.902637849825325,
+      77.47245803060508,
+      26.084848541785718,
+      8.547356364905413,
+      7.901790416056991,
+      0.18122717619782813,
+      28.68757451657393,
+      71.87638169174379,
+      24.997589705210416,
+      8.79140261804432,
+      7.537785916636085,
+      0.195620570912033
+    ],
+    "maximum_raw_limit_ratio": 0.39934256716806743,
+    "maximum_applied_limit_ratio": 0.39934256716806743,
+    "saturated_tick_count": 0,
+    "saturated_motor_tick_counts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "saturation_fraction": 0.0,
+    "raw_command_total_variation_Nm": [
+      94166.5594024542,
+      988974.3388534501,
+      350300.45610404806,
+      73959.97881505519,
+      132947.68311278385,
+      398.45915889864665,
+      98711.04009217011,
+      1056294.0135579302,
+      345200.6912201465,
+      89366.89808050028,
+      139384.46819489225,
+      390.5366701513706
+    ],
+    "applied_total_variation_Nm": [
+      94166.5594024542,
+      988974.3388534501,
+      350300.45610404806,
+      73959.97881505519,
+      132947.68311278385,
+      398.45915889864665,
+      98711.04009217011,
+      1056294.0135579302,
+      345200.6912201465,
+      89366.89808050028,
+      139384.46819489225,
+      390.5366701513706
+    ],
+    "expected_clipping_max_error_Nm": 0.0,
+    "interpretation": "Raw command and physical clipped command both retained. Saturation is a performance outcome; incorrect clipping or omitted samples is a validation error."
+  },
+  "minimum_common_normalized_gap": 0.8085890488479438,
+  "constraint_violating_samples": 0,
+  "internal_force_metrics_final_2s": {
+    "available": true,
+    "interval_s": [
+      22.0,
+      24.0
+    ],
+    "samples": 4001,
+    "arms": {
+      "left": {
+        "force_xyz_N": {
+          "samples": 4001,
+          "all_finite": true,
+          "nonfinite_actual_samples": 0,
+          "nonfinite_desired_samples": 0,
+          "actual_mean": [
+            -0.0032833937961630763,
+            -4.908111338650262,
+            -0.6694169070698596
+          ],
+          "desired_mean": [
+            0.0,
+            -5.0,
+            0.0
+          ],
+          "error_bias": [
+            -0.0032833937961630763,
+            0.09188866134972883,
+            -0.6694169070698596
+          ],
+          "error_rms_components": [
+            1.2214283005707667,
+            2.4169097261068337,
+            0.8525177808631149
+          ],
+          "error_vector_rms": 2.839036154097508,
+          "actual_ac_rms_components": [
+            1.2214238874200758,
+            2.4151623336879795,
+            0.5278897339566241
+          ],
+          "actual_ac_vector_rms": 2.7574540761438495,
+          "error_ac_rms_components": [
+            1.2214238874200758,
+            2.4151623336879786,
+            0.5278897339566241
+          ],
+          "error_ac_vector_rms": 2.7574540761438495,
+          "actual_peak_to_peak_components": [
+            6.753532996089827,
+            13.411374819539915,
+            2.095028040210785
+          ],
+          "error_peak_to_peak_components": [
+            6.753532996089827,
+            13.411374819539915,
+            2.095028040210785
+          ],
+          "sampled_max_abs_actual_components": [
+            4.252698497261404,
+            13.613742318007027,
+            1.775473968627784
+          ],
+          "sampled_max_abs_error_components": [
+            4.252698497261404,
+            8.613742318007027,
+            1.775473968627784
+          ],
+          "sampled_max_actual_vector_norm": 14.31479629278802,
+          "sampled_max_error_vector_norm": 9.683799343436823
+        },
+        "euler_moment_xyz_Nm": {
+          "samples": 4001,
+          "all_finite": true,
+          "nonfinite_actual_samples": 0,
+          "nonfinite_desired_samples": 0,
+          "actual_mean": [
+            -0.1346016089493655,
+            -0.0009874690079974184,
+            0.02408486800743592
+          ],
+          "desired_mean": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "error_bias": [
+            -0.1346016089493655,
+            -0.0009874690079974184,
+            0.02408486800743592
+          ],
+          "error_rms_components": [
+            0.21349213052887006,
+            0.002522321814209143,
+            0.0423063683416939
+          ],
+          "error_vector_rms": 0.21765817399618517,
+          "actual_ac_rms_components": [
+            0.1657145034871667,
+            0.002320993815734956,
+            0.034781430898217384
+          ],
+          "actual_ac_vector_rms": 0.1693411692814785,
+          "error_ac_rms_components": [
+            0.1657145034871667,
+            0.002320993815734956,
+            0.034781430898217384
+          ],
+          "error_ac_vector_rms": 0.1693411692814785,
+          "actual_peak_to_peak_components": [
+            0.7492142489681888,
+            0.016543631764766926,
+            0.2510329296740531
+          ],
+          "error_peak_to_peak_components": [
+            0.7492142489681888,
+            0.016543631764766926,
+            0.2510329296740531
+          ],
+          "sampled_max_abs_actual_components": [
+            0.5316594748162513,
+            0.009268450815492768,
+            0.16073928366303014
+          ],
+          "sampled_max_abs_error_components": [
+            0.5316594748162513,
+            0.009268450815492768,
+            0.16073928366303014
+          ],
+          "sampled_max_actual_vector_norm": 0.5316675983863023,
+          "sampled_max_error_vector_norm": 0.5316675983863023
+        }
+      },
+      "right": {
+        "force_xyz_N": {
+          "samples": 4001,
+          "all_finite": true,
+          "nonfinite_actual_samples": 0,
+          "nonfinite_desired_samples": 0,
+          "actual_mean": [
+            0.0032833937961630763,
+            4.908111338650262,
+            0.6694169070698596
+          ],
+          "desired_mean": [
+            0.0,
+            5.0,
+            0.0
+          ],
+          "error_bias": [
+            0.0032833937961630763,
+            -0.09188866134972883,
+            0.6694169070698596
+          ],
+          "error_rms_components": [
+            1.2214283005707667,
+            2.4169097261068337,
+            0.8525177808631148
+          ],
+          "error_vector_rms": 2.839036154097508,
+          "actual_ac_rms_components": [
+            1.2214238874200758,
+            2.4151623336879795,
+            0.5278897339566242
+          ],
+          "actual_ac_vector_rms": 2.7574540761438495,
+          "error_ac_rms_components": [
+            1.2214238874200758,
+            2.4151623336879786,
+            0.5278897339566242
+          ],
+          "error_ac_vector_rms": 2.7574540761438495,
+          "actual_peak_to_peak_components": [
+            6.753532996089827,
+            13.411374819539915,
+            2.095028040210785
+          ],
+          "error_peak_to_peak_components": [
+            6.753532996089827,
+            13.411374819539915,
+            2.095028040210785
+          ],
+          "sampled_max_abs_actual_components": [
+            4.252698497261404,
+            13.613742318007027,
+            1.775473968627784
+          ],
+          "sampled_max_abs_error_components": [
+            4.252698497261404,
+            8.613742318007027,
+            1.775473968627784
+          ],
+          "sampled_max_actual_vector_norm": 14.31479629278802,
+          "sampled_max_error_vector_norm": 9.683799343436823
+        },
+        "euler_moment_xyz_Nm": {
+          "samples": 4001,
+          "all_finite": true,
+          "nonfinite_actual_samples": 0,
+          "nonfinite_desired_samples": 0,
+          "actual_mean": [
+            0.1346016089493655,
+            0.0009874690079974186,
+            -0.02408486800743592
+          ],
+          "desired_mean": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "error_bias": [
+            0.1346016089493655,
+            0.0009874690079974186,
+            -0.02408486800743592
+          ],
+          "error_rms_components": [
+            0.21349213052887006,
+            0.002522321814209143,
+            0.0423063683416939
+          ],
+          "error_vector_rms": 0.21765817399618517,
+          "actual_ac_rms_components": [
+            0.1657145034871667,
+            0.002320993815734956,
+            0.034781430898217384
+          ],
+          "actual_ac_vector_rms": 0.1693411692814785,
+          "error_ac_rms_components": [
+            0.1657145034871667,
+            0.002320993815734956,
+            0.034781430898217384
+          ],
+          "error_ac_vector_rms": 0.1693411692814785,
+          "actual_peak_to_peak_components": [
+            0.7492142489681888,
+            0.016543631764766926,
+            0.2510329296740531
+          ],
+          "error_peak_to_peak_components": [
+            0.7492142489681888,
+            0.016543631764766926,
+            0.2510329296740531
+          ],
+          "sampled_max_abs_actual_components": [
+            0.5316594748162513,
+            0.009268450815492768,
+            0.16073928366303014
+          ],
+          "sampled_max_abs_error_components": [
+            0.5316594748162513,
+            0.009268450815492768,
+            0.16073928366303014
+          ],
+          "sampled_max_actual_vector_norm": 0.5316675983863023,
+          "sampled_max_error_vector_norm": 0.5316675983863023
+        }
+      }
+    },
+    "interpretation": "Uniform saved-tick statistics, inclusive endpoints; AC removes only within-window mean. Cartesian force N and generalized Euler-coordinate moment Nm are reported separately; peaks are saved-tick peaks."
+  }
+}

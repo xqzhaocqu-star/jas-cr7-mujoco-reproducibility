@@ -1,0 +1,1552 @@
+{
+  "directory": "REPOSITORY_ROOT/simulation/results_demo/main/nominal/proposed",
+  "validity_passed": true,
+  "checks": {
+    "source_manifest_sha256": {
+      "passed": true,
+      "checked_files": 25,
+      "missing_required_sources": [],
+      "mismatches": []
+    },
+    "imported_asset_sha256": {
+      "passed": true,
+      "checked_files": 10,
+      "mismatches": []
+    },
+    "online_laws_have_no_truth_reaction_acceleration_or_changing_gains": {
+      "passed": true,
+      "forbidden_reads": [],
+      "replacement_learning_imports": [],
+      "outside_initialization_gain_mutations": []
+    },
+    "external_is_independent_and_does_not_use_nominal_or_true_dynamics": {
+      "passed": true,
+      "forbidden_imports": [],
+      "dynamic_placeholder_read_lines": []
+    },
+    "runner_only_diagnoses_force_after_control_and_reads_truth_after_rollout": {
+      "passed": true,
+      "force_read_lines": [
+        129
+      ],
+      "update_lines": [
+        118
+      ],
+      "truth_read_lines": [
+        209
+      ],
+      "physical_loop_last_line": 199,
+      "hidden_state_reset_lines": []
+    },
+    "declared_method_and_adaptation_semantics": {
+      "passed": true,
+      "method": "proposed",
+      "has_adaptation": true
+    },
+    "fixed_original_positive_gains_paired_exponents_and_prior_sign_rule": {
+      "passed": true,
+      "all_required_gains_positive": true,
+      "paired_exponents": true,
+      "scalar_required_parameters": true,
+      "prior": [
+        0.85,
+        1.15
+      ],
+      "robust_mode": "paper_sign",
+      "prior_width_R": 0.29999999999999993,
+      "interpretation": "Ablated terms remain positively configured and are deleted only by the named method; all other JAS gains are held fixed."
+    },
+    "uniform_predeclared_entry_tolerances_and_at_least_two_second_hold": {
+      "passed": true,
+      "entry_thresholds": {
+        "position_m": 0.00025,
+        "orientation_rad": 0.0008726646259971648,
+        "surface_component_abs": 0.001,
+        "xi_component_abs": 0.0005,
+        "hold_s": 2.0
+      }
+    },
+    "frozen_protocol_method_scenario_settings_and_sample_grid": {
+      "passed": true,
+      "trial_id": "nominal__proposed",
+      "mismatched_settings": [],
+      "expected_intervals_s": [
+        0.0005,
+        0.000125
+      ],
+      "scenario_matches": true
+    },
+    "comparison_gains_calibrated_once_from_registered_nominal_initial_state": {
+      "passed": true,
+      "linear_surface_gain": [
+        10.090079323512306,
+        12.533725886493267,
+        11.385555932728053,
+        7.254450727277798,
+        8.940694122402691,
+        7.975665135294944
+      ],
+      "independently_rebuilt_linear_gain": [
+        10.090079323512306,
+        12.533725886493267,
+        11.385555932728053,
+        7.254450727277798,
+        8.940694122402691,
+        7.975665135294944
+      ],
+      "fixed_log_scale": [
+        0.016941176470588237,
+        0.014000000000000002,
+        0.014933333333333335,
+        0.04680851063829787,
+        0.04,
+        0.04497777777777778
+      ],
+      "interpretation": "No individual trajectory, truth, or online adjustment is used to retune either comparator."
+    },
+    "complete_raw_schema_for_every_saved_command": {
+      "passed": true,
+      "missing_channels": [],
+      "saved_ticks": 48001
+    },
+    "complete_saved_prefix_without_dropped_ticks_or_fabricated_states": {
+      "passed": true,
+      "samples": 48001,
+      "requested_end_s": 24.0,
+      "actual_end_s": 24.0,
+      "state_shapes_correct": true,
+      "saved_states_finite": true,
+      "run_status": "completed"
+    },
+    "completion_or_explicit_retained_termination_metadata": {
+      "passed": true,
+      "run_status": "completed",
+      "termination_stage": null,
+      "termination_reason": null,
+      "failed_attempt_time_s": null,
+      "failure_state_present": false,
+      "actual_failed_mujoco_clock_s": null,
+      "expected_failed_physical_clock_s": null,
+      "interpretation": "Explicitly recorded termination is a retained performance outcome, not by itself an invalid formula."
+    },
+    "raw_validity_masks_do_not_remove_unsuccessful_samples": {
+      "passed": true,
+      "invalid_tick_count": 0,
+      "barrier_not_applicable_count": 0
+    },
+    "all_tick_full_scene_fk_local_pose_true_error_and_reference": {
+      "passed": true,
+      "maximum_errors": {
+        "object_pose": 0.0,
+        "local_error": 1.942890293094024e-15,
+        "reference": 4.163336342344337e-16,
+        "error": 4.163336342344337e-16,
+        "sigma_min": 8.049116928532385e-16
+      },
+      "samples": 48001,
+      "reference_profile": "moderate"
+    },
+    "registered_initial_payload_pose_and_zero_velocity": {
+      "passed": true,
+      "maximum_initial_pose_error": 1.734723475976807e-17,
+      "maximum_initial_speed": 0.0,
+      "note": "Initial condition is checked against the registered scenario, not inferred from a successful later prefix."
+    },
+    "all_tick_common_bounds_and_unclipped_signed_margins": {
+      "passed": true,
+      "maximum_errors": {
+        "upper": 1.1102230246251565e-16,
+        "lower": 1.1102230246251565e-16,
+        "barrier_margin": 9.85878045867139e-14,
+        "actual_barrier_margin": 5.773159728050814e-15
+      },
+      "actual_violating_samples": 0,
+      "local_violating_samples": 0,
+      "interpretation": "Negative margins are retained. Common first-second bounds are an extra assessment requirement for original JAS."
+    },
+    "native_control_envelope_is_distinct_and_not_clipped": {
+      "passed": true,
+      "maximum_errors": {
+        "native_upper": 0.0,
+        "native_lower": 0.0,
+        "native_barrier_margin": 2.4313884239290928e-14
+      },
+      "minimum_native_margin": 0.197264057431618,
+      "note": "Saved successful commands must be inside their own control domain; common-margin violations remain permitted outcomes."
+    },
+    "configured_physics_is_RK4_with_integer_control_substeps": {
+      "passed": true,
+      "integrator": "RK4",
+      "control_dt_s": 0.0005,
+      "physics_dt_s": 0.000125,
+      "substeps": 4
+    },
+    "sampled_full_mujoco_held_torque_interval_replay": {
+      "passed": true,
+      "intervals": 31,
+      "maximum_qpos_error": 2.7755575615628914e-17,
+      "maximum_qvel_error": 1.2212453270876722e-15,
+      "maximum_time_error_s": 3.552713678800501e-15,
+      "maximum_contacts": 0,
+      "warning_count": 0,
+      "note": "Replay contacts/warnings are disclosed; their occurrence is a performance outcome."
+    },
+    "sampled_torque_formula_and_exact_declared_module_ablation": {
+      "passed": true,
+      "method": "proposed",
+      "sampled_ticks": 31,
+      "maximum_errors": {
+        "torque_command": 2.842170943040401e-14,
+        "regressor": 1.4210854715202004e-14,
+        "momentum": 2.220446049250313e-16,
+        "remainder": 9.43689570931383e-16,
+        "surface": 1.6904880273393985e-15,
+        "xi": 3.4992625116969656e-17,
+        "A": 4.440892098500626e-16,
+        "known_torque_left": 5.329070518200751e-15,
+        "known_torque_right": 1.4210854715202004e-14,
+        "learning_drive": 1.0186296250935811e-14
+      },
+      "maximum_tolerance_ratios": {
+        "torque_command": 1.4158527190474923e-06,
+        "regressor": 7.091597071587071e-07,
+        "momentum": 1.1101053504437214e-08,
+        "remainder": 4.711024848218857e-08,
+        "surface": 8.452415896202963e-08,
+        "xi": 1.7496308694759342e-09,
+        "A": 2.2198131531880304e-08,
+        "known_torque_left": 2.6504357542289263e-07,
+        "known_torque_right": 7.034503223413804e-07,
+        "learning_drive": 5.093126328093228e-07
+      },
+      "matches_original_controller_when_applicable": true,
+      "interpretation": "Only traditional transform, linear surface, linear reaching, or zero history coefficient changes in its named ablation; original prior-width sign remains."
+    },
+    "sampled_local_filter_inputs_regressor_surface_and_known_torque": {
+      "passed": true,
+      "sampled_ticks": 31,
+      "maximum_errors": {
+        "momentum": 2.220446049250313e-16,
+        "learning_drive": 1.0186296250935811e-14,
+        "xi": 3.4992625116969656e-17,
+        "known_torque_left": 5.329070518200751e-15,
+        "A": 4.440892098500626e-16,
+        "remainder": 9.43689570931383e-16,
+        "surface": 1.6904880273393985e-15,
+        "regressor": 1.4210854715202004e-14,
+        "known_torque_right": 1.4210854715202004e-14
+      },
+      "maximum_tolerance_ratios": {
+        "momentum": 1.1101053504437214e-08,
+        "learning_drive": 5.093126328093228e-07,
+        "xi": 1.7496308694759342e-09,
+        "known_torque_left": 2.6504357542289263e-07,
+        "A": 2.2198131531880304e-08,
+        "remainder": 4.711024848218857e-08,
+        "surface": 8.452415896202963e-08,
+        "regressor": 7.091597071587071e-07,
+        "known_torque_right": 7.034503223413804e-07
+      }
+    },
+    "original_local_filter_raw_channels_present": {
+      "passed": true,
+      "missing": []
+    },
+    "original_local_momentum_filter_and_causal_known_torque": {
+      "passed": true,
+      "maximum_regressor_error": 2.984279490192421e-13,
+      "maximum_torque_error": 1.2221335055073723e-12,
+      "interpretation": "Original local six-dimensional filter only; no measured reaction or payload observation block."
+    },
+    "original_raw_gram_ie_first_threshold_crossing": {
+      "passed": true,
+      "reconstructed_times_s": [
+        6.0,
+        6.0
+      ],
+      "reported_times_s": [
+        6.0,
+        6.0
+      ],
+      "window_s": 6.0,
+      "threshold": 0.005,
+      "trigger": "lambda_min(raw Gram)>=omega, first local crossing at or after window; no target or normalized threshold."
+    },
+    "original_frozen_gram_and_p_rebuilt_from_raw_samples": {
+      "passed": true,
+      "maximum_gram_error": 0.0,
+      "gram_tolerance": 5.0640658111799e-08,
+      "maximum_p_error": 0.0,
+      "p_tolerance": 5.258655516308286e-08
+    },
+    "original_raw_minimum_eigenvalue_log": {
+      "passed": true,
+      "maximum_error": 0.0
+    },
+    "constant_positive_configured_gain_and_explicit_one_module_history_ablation": {
+      "passed": true,
+      "Upsilon_diagonal": [
+        28.999190131219716,
+        0.00033977480670533647,
+        0.00031000145730544553,
+        0.00038526809372251003,
+        0.0003903413503538279,
+        0.0016730795990336901,
+        3.552331704227484,
+        0.0029379093710310395
+      ],
+      "configured_gamma": 1.0,
+      "effective_gamma": 1.0,
+      "retained": "Original -YS, causal filter, raw IE/frozen history and component projection for all five adaptive methods."
+    },
+    "every_tick_complete_projected_euler_learning_update": {
+      "passed": true,
+      "initial_control_error": 0.0,
+      "initial_update_error": 0.0,
+      "continuity_error": 0.0,
+      "learning_drive_error": 1.7763568394002505e-15,
+      "preupdate_epsilon_error": 5.4569682106375694e-12,
+      "updated_theta_error": 2.220446049250313e-16,
+      "effective_gamma": 1.0,
+      "projection": "Original tangent blocking, then box-projected Euler step; no replaced history law."
+    },
+    "theta_prior_box_and_projection_count_are_not_hidden": {
+      "passed": true,
+      "lower": 0.85,
+      "upper": 1.15,
+      "actual_component_min": [
+        [
+          0.85,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.8999158240630671,
+          0.9
+        ],
+        [
+          0.85,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.9
+        ]
+      ],
+      "actual_component_max": [
+        [
+          0.9158227040115773,
+          1.0713519297243175,
+          1.0597798978028257,
+          1.054930495472238,
+          0.9895256168172837,
+          1.0842201667313447,
+          1.075348465883029,
+          1.15
+        ],
+        [
+          1.15,
+          0.9917985715247543,
+          0.9876428619237243,
+          1.0340437022931965,
+          0.9571992619538773,
+          1.017308781421693,
+          1.15,
+          1.055531710487595
+        ]
+      ],
+      "reconstructed_clip_step_counts": [
+        2,
+        4
+      ],
+      "recorded_clip_step_counts": [
+        2,
+        4
+      ],
+      "interpretation": "Measured projection invariance is not evidence of an exponential parameter-error envelope."
+    },
+    "offline_original_stored_residual_not_removed_or_compensated": {
+      "passed": true,
+      "maximum_error": 0.0,
+      "residual_norms": [
+        219.27287059986605,
+        97.21906985838903
+      ],
+      "interpretation": "This is offline only. Nonzero history residual precludes an unconditional exact-truth exponential claim."
+    },
+    "offline_truth_metrics_use_physics_asset_and_never_change_online_inputs": {
+      "passed": true,
+      "actual_parameters_offline_only": [
+        [
+          0.94,
+          1.06,
+          1.04,
+          0.97,
+          1.05,
+          0.96,
+          0.98,
+          1.08
+        ],
+        [
+          1.06,
+          0.94,
+          0.96,
+          1.03,
+          0.95,
+          1.04,
+          1.04,
+          1.08
+        ]
+      ],
+      "source": "models/plant_truth.json"
+    },
+    "offline_newton_euler_balance_and_measured_force_reconstruction": {
+      "passed": true,
+      "sampled_ticks": 31,
+      "maximum_robot_balance_error_Nm": 1.1930012533412082e-11,
+      "maximum_payload_balance_error": 2.1820767415192677e-11,
+      "maximum_saved_interaction_discrepancy": 1.995448251079779e-11,
+      "maximum_saved_internal_discrepancy": 1.468958288342037e-11,
+      "maximum_non_equality_generalized_reaction": 0.0,
+      "interpretation": "qacc and truth are validation only. Full reaction, including any contact/limit contribution, is retained and disclosed."
+    },
+    "nominal_coupled_basis_matches_independent_local_newton_euler": {
+      "passed": true,
+      "maximum_basis_error": 1.5896617355792841e-10,
+      "sampled_ticks": 31
+    },
+    "independent_entry_times_violations_and_thresholds_not_filtered": {
+      "passed": true,
+      "reconstructed_tracking_entry": {
+        "position_entry_s": 1.3995,
+        "orientation_coordinate_entry_s": 7.4275,
+        "simultaneous_entry_s": 7.4275,
+        "componentwise_entry_s": [
+          1.395,
+          1.0010000000000001,
+          0.2465,
+          0.317,
+          7.4270000000000005,
+          1.212
+        ]
+      },
+      "reconstructed_surface_entry_s": null,
+      "reconstructed_xi_layer_entry_s": 18.841,
+      "actual_violating_saved_ticks": 0,
+      "JAS_phase_criteria_applicable": true,
+      "minimum_common_normalized_gap": 0.8085890488479438,
+      "hold_s": 2.0,
+      "interpretation": "Entry must persist to the requested end for at least two seconds. Truncated trials are right censored."
+    },
+    "raw_commands_and_exact_physical_torque_clipping_retained": {
+      "passed": true,
+      "expected_clip_error_Nm": 0.0,
+      "saturated_tick_count": 0,
+      "saturation_fraction": 0.0,
+      "maximum_raw_limit_ratio": 0.39934256716806743,
+      "interpretation": "Nonzero saturation is reported, never used to remove a sample or fail an otherwise correct physical clip."
+    },
+    "saved_torque_metrics_match_all_raw_commands": {
+      "passed": true,
+      "scalar_metric_errors": {
+        "saturated_tick_count": 0,
+        "saturation_fraction": 0.0,
+        "maximum_raw_limit_ratio": 0.0,
+        "maximum_applied_limit_ratio": 0.0,
+        "expected_clipping_max_error_Nm": 0.0
+      }
+    },
+    "desired_internal_force_and_logged_force_statistics_match_raw_samples": {
+      "passed": true,
+      "maximum_desired_force_error": 0.0,
+      "maximum_force_statistic_discrepancy": 0.0,
+      "units": "Cartesian xyz N and generalized Euler-coordinate moments Nm are kept separate."
+    }
+  },
+  "failures": [],
+  "performance": {
+    "run_status": "completed",
+    "termination_reason": null,
+    "requested_duration_s": 24.0,
+    "recorded_end_s": 24.0,
+    "all_recorded_samples_retained": 48001,
+    "tracking_entry": {
+      "position_entry_s": 1.3995,
+      "orientation_coordinate_entry_s": 7.4275,
+      "simultaneous_entry_s": 7.4275,
+      "componentwise_entry_s": [
+        1.395,
+        1.0010000000000001,
+        0.2465,
+        0.317,
+        7.4270000000000005,
+        1.212
+      ]
+    },
+    "tolerance_sensitivity": [
+      {
+        "multiplier": 0.5,
+        "position_norm_m": 0.000125,
+        "orientation_coordinate_norm_rad": 0.0004363323129985824,
+        "simultaneous_entry_s": 18.392
+      },
+      {
+        "multiplier": 1.0,
+        "position_norm_m": 0.00025,
+        "orientation_coordinate_norm_rad": 0.0008726646259971648,
+        "simultaneous_entry_s": 7.4275
+      },
+      {
+        "multiplier": 2.0,
+        "position_norm_m": 0.0005,
+        "orientation_coordinate_norm_rad": 0.0017453292519943296,
+        "simultaneous_entry_s": 1.614
+      }
+    ],
+    "surface_entry_s": null,
+    "xi_layer_entry_s": 18.841,
+    "phase_coordinate_semantics": "Method-specific sliding variable and barrier coordinate; cross-structure ranking uses common physical tracking tolerances.",
+    "minimum_common_normalized_gap": 0.8085890488479438,
+    "common_violating_tick_count": 0,
+    "local_common_violating_tick_count": 0,
+    "maximum_position_error_norm_m": 0.02165640782770772,
+    "final_position_error_norm_m": 2.6433753503718882e-06,
+    "final_orientation_coordinate_error_norm_rad": 6.782172017399334e-05,
+    "final_two_second_position_error_rms_m": 2.527018679522095e-06,
+    "torque": {
+      "samples": 48001,
+      "all_finite": true,
+      "raw_command_rms_Nm": [
+        5.40720926681424,
+        44.91654065671052,
+        14.160588980178238,
+        5.439456278589137,
+        5.518757101227649,
+        0.03335744149219145,
+        5.24230304950653,
+        42.54402224126831,
+        13.868122865294021,
+        5.189188506021388,
+        5.179192256509588,
+        0.033889606877075
+      ],
+      "applied_rms_Nm": [
+        5.40720926681424,
+        44.91654065671052,
+        14.160588980178238,
+        5.439456278589137,
+        5.518757101227649,
+        0.03335744149219145,
+        5.24230304950653,
+        42.54402224126831,
+        13.868122865294021,
+        5.189188506021388,
+        5.179192256509588,
+        0.033889606877075
+      ],
+      "raw_command_peak_abs_Nm": [
+        28.902637849825325,
+        77.47245803060508,
+        26.084848541785718,
+        8.547356364905413,
+        7.901790416056991,
+        0.18122717619782813,
+        28.68757451657393,
+        71.87638169174379,
+        24.997589705210416,
+        8.79140261804432,
+        7.537785916636085,
+        0.195620570912033
+      ],
+      "applied_peak_abs_Nm": [
+        28.902637849825325,
+        77.47245803060508,
+        26.084848541785718,
+        8.547356364905413,
+        7.901790416056991,
+        0.18122717619782813,
+        28.68757451657393,
+        71.87638169174379,
+        24.997589705210416,
+        8.79140261804432,
+        7.537785916636085,
+        0.195620570912033
+      ],
+      "maximum_raw_limit_ratio": 0.39934256716806743,
+      "maximum_applied_limit_ratio": 0.39934256716806743,
+      "saturated_tick_count": 0,
+      "saturated_motor_tick_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "saturation_fraction": 0.0,
+      "raw_command_total_variation_Nm": [
+        94166.5594024542,
+        988974.3388534501,
+        350300.45610404806,
+        73959.97881505519,
+        132947.68311278385,
+        398.45915889864665,
+        98711.04009217011,
+        1056294.0135579302,
+        345200.6912201465,
+        89366.89808050028,
+        139384.46819489225,
+        390.5366701513706
+      ],
+      "applied_total_variation_Nm": [
+        94166.5594024542,
+        988974.3388534501,
+        350300.45610404806,
+        73959.97881505519,
+        132947.68311278385,
+        398.45915889864665,
+        98711.04009217011,
+        1056294.0135579302,
+        345200.6912201465,
+        89366.89808050028,
+        139384.46819489225,
+        390.5366701513706
+      ],
+      "expected_clipping_max_error_Nm": 0.0,
+      "interpretation": "Raw command and physical clipped command both retained. Saturation is a performance outcome; incorrect clipping or omitted samples is a validation error."
+    },
+    "theta": {
+      "applicable": true,
+      "component_minimum": [
+        [
+          0.85,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.8999158240630671,
+          0.9
+        ],
+        [
+          0.85,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.9
+        ]
+      ],
+      "component_maximum": [
+        [
+          0.9158227040115773,
+          1.0713519297243175,
+          1.0597798978028257,
+          1.054930495472238,
+          0.9895256168172837,
+          1.0842201667313447,
+          1.075348465883029,
+          1.15
+        ],
+        [
+          1.15,
+          0.9917985715247543,
+          0.9876428619237243,
+          1.0340437022931965,
+          0.9571992619538773,
+          1.017308781421693,
+          1.15,
+          1.055531710487595
+        ]
+      ],
+      "maximum_true_error_norm": [
+        0.34146742157927745,
+        0.348998567332303
+      ],
+      "final_true_error_norm": [
+        0.18857837778210756,
+        0.2601964013135084
+      ],
+      "final_estimate": [
+        [
+          0.85,
+          1.0677653119324788,
+          1.0580728234369794,
+          1.054930495472238,
+          0.9339840899324192,
+          0.9912959582776814,
+          1.0028595734004628,
+          1.15
+        ],
+        [
+          0.85,
+          0.9792269305629547,
+          0.9817473121628149,
+          1.0340437022931965,
+          0.9247426137172811,
+          0.9492394066399455,
+          1.15,
+          1.055531710487595
+        ]
+      ],
+      "final_two_second_drift_per_s": [
+        [
+          1.267201690210215e-15,
+          -0.0003637054330582841,
+          -0.0002074256220694319,
+          0.0012138366419138138,
+          -0.0005350018633729056,
+          -0.0003159036656706217,
+          0.0017687430087113703,
+          1.988915903006236e-15
+        ],
+        [
+          1.267201690210215e-15,
+          -0.0006554119778407292,
+          -0.0003329091067873341,
+          0.0021180228617792567,
+          -0.0007471025147032632,
+          -0.001593340625160148,
+          1.988915903006236e-15,
+          0.0009116845979216243
+        ]
+      ],
+      "maximum_absolute_one_step_change": [
+        [
+          0.0007354870997460239,
+          7.959886906816482e-05,
+          7.641398041158265e-05,
+          8.152308491349292e-05,
+          6.754140187004154e-05,
+          0.00014011856673634693,
+          0.0002127562039825337,
+          0.00018083279076008818
+        ],
+        [
+          0.0008398947941328228,
+          5.3053408758607645e-05,
+          5.101968641629817e-05,
+          5.5315473985850794e-05,
+          4.5907598620664736e-05,
+          9.535767149948526e-05,
+          0.0004650541310189382,
+          0.00012395058419401028
+        ]
+      ],
+      "projection_step_counts": [
+        2,
+        4
+      ],
+      "interpretation": "Truth is evaluation-only. Box bounds and finite drift do not prove an exponential error envelope."
+    },
+    "internal_force": {
+      "full": {
+        "available": true,
+        "interval_s": [
+          0.0,
+          24.0
+        ],
+        "samples": 48001,
+        "arms": {
+          "left": {
+            "force_xyz_N": {
+              "samples": 48001,
+              "all_finite": true,
+              "nonfinite_actual_samples": 0,
+              "nonfinite_desired_samples": 0,
+              "actual_mean": [
+                0.024559613002407936,
+                -4.457069427866957,
+                -0.645848702831285
+              ],
+              "desired_mean": [
+                0.0,
+                -5.0,
+                0.0
+              ],
+              "error_bias": [
+                0.024559613002407936,
+                0.5429305721330671,
+                -0.645848702831285
+              ],
+              "error_rms_components": [
+                0.9183665914472656,
+                2.8968512103811945,
+                0.8814393800365093
+              ],
+              "error_vector_rms": 3.1641870222938158,
+              "actual_ac_rms_components": [
+                0.9180381373862676,
+                2.845518112564068,
+                0.5998456749283965
+              ],
+              "actual_ac_vector_rms": 3.049521632052507,
+              "error_ac_rms_components": [
+                0.9180381373862676,
+                2.8455181125640663,
+                0.5998456749283965
+              ],
+              "error_ac_vector_rms": 3.0495216320525076,
+              "actual_peak_to_peak_components": [
+                7.666541610110526,
+                26.50278550405963,
+                7.448357739386827
+              ],
+              "error_peak_to_peak_components": [
+                7.666541610110526,
+                26.50278550405963,
+                7.448357739386827
+              ],
+              "sampled_max_abs_actual_components": [
+                4.425413538565152,
+                17.745738461895844,
+                4.312975579445197
+              ],
+              "sampled_max_abs_error_components": [
+                4.425413538565152,
+                13.757047042163787,
+                4.312975579445197
+              ],
+              "sampled_max_actual_vector_norm": 18.103165853679215,
+              "sampled_max_error_vector_norm": 14.089387757973624
+            },
+            "euler_moment_xyz_Nm": {
+              "samples": 48001,
+              "all_finite": true,
+              "nonfinite_actual_samples": 0,
+              "nonfinite_desired_samples": 0,
+              "actual_mean": [
+                -0.10084275427968704,
+                -0.0018797284247748843,
+                0.04568495149316127
+              ],
+              "desired_mean": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "error_bias": [
+                -0.10084275427968704,
+                -0.0018797284247748843,
+                0.04568495149316127
+              ],
+              "error_rms_components": [
+                0.22037018237857692,
+                0.00986939766931965,
+                0.08838079691083973
+              ],
+              "error_vector_rms": 0.23763751293623142,
+              "actual_ac_rms_components": [
+                0.19594324737242982,
+                0.009688737348295982,
+                0.07565745481882565
+              ],
+              "actual_ac_vector_rms": 0.21026573256696066,
+              "error_ac_rms_components": [
+                0.19594324737242982,
+                0.009688737348295982,
+                0.07565745481882565
+              ],
+              "error_ac_vector_rms": 0.21026573256696066,
+              "actual_peak_to_peak_components": [
+                1.3081582821676576,
+                0.10623219697553621,
+                0.5628645625339195
+              ],
+              "error_peak_to_peak_components": [
+                1.3081582821676576,
+                0.10623219697553621,
+                0.5628645625339195
+              ],
+              "sampled_max_abs_actual_components": [
+                0.8726328081903125,
+                0.05746197429022152,
+                0.3105647877454406
+              ],
+              "sampled_max_abs_error_components": [
+                0.8726328081903125,
+                0.05746197429022152,
+                0.3105647877454406
+              ],
+              "sampled_max_actual_vector_norm": 0.8804703978838144,
+              "sampled_max_error_vector_norm": 0.8804703978838144
+            }
+          },
+          "right": {
+            "force_xyz_N": {
+              "samples": 48001,
+              "all_finite": true,
+              "nonfinite_actual_samples": 0,
+              "nonfinite_desired_samples": 0,
+              "actual_mean": [
+                -0.024559613002407957,
+                4.457069427866957,
+                0.6458487028312847
+              ],
+              "desired_mean": [
+                0.0,
+                5.0,
+                0.0
+              ],
+              "error_bias": [
+                -0.024559613002407957,
+                -0.5429305721330671,
+                0.6458487028312847
+              ],
+              "error_rms_components": [
+                0.9183665914472656,
+                2.8968512103811945,
+                0.8814393800365093
+              ],
+              "error_vector_rms": 3.164187022293816,
+              "actual_ac_rms_components": [
+                0.9180381373862676,
+                2.845518112564068,
+                0.5998456749283965
+              ],
+              "actual_ac_vector_rms": 3.049521632052507,
+              "error_ac_rms_components": [
+                0.9180381373862676,
+                2.8455181125640663,
+                0.5998456749283965
+              ],
+              "error_ac_vector_rms": 3.049521632052507,
+              "actual_peak_to_peak_components": [
+                7.666541610110526,
+                26.50278550405963,
+                7.448357739386823
+              ],
+              "error_peak_to_peak_components": [
+                7.666541610110526,
+                26.50278550405963,
+                7.448357739386823
+              ],
+              "sampled_max_abs_actual_components": [
+                4.425413538565152,
+                17.745738461895844,
+                4.312975579445196
+              ],
+              "sampled_max_abs_error_components": [
+                4.425413538565152,
+                13.757047042163787,
+                4.312975579445196
+              ],
+              "sampled_max_actual_vector_norm": 18.103165853679215,
+              "sampled_max_error_vector_norm": 14.089387757973624
+            },
+            "euler_moment_xyz_Nm": {
+              "samples": 48001,
+              "all_finite": true,
+              "nonfinite_actual_samples": 0,
+              "nonfinite_desired_samples": 0,
+              "actual_mean": [
+                0.10084275427968704,
+                0.0018797284247748828,
+                -0.04568495149316127
+              ],
+              "desired_mean": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "error_bias": [
+                0.10084275427968704,
+                0.0018797284247748828,
+                -0.04568495149316127
+              ],
+              "error_rms_components": [
+                0.22037018237857692,
+                0.00986939766931965,
+                0.08838079691083975
+              ],
+              "error_vector_rms": 0.23763751293623142,
+              "actual_ac_rms_components": [
+                0.19594324737242982,
+                0.009688737348295983,
+                0.07565745481882565
+              ],
+              "actual_ac_vector_rms": 0.21026573256696066,
+              "error_ac_rms_components": [
+                0.19594324737242982,
+                0.009688737348295983,
+                0.07565745481882565
+              ],
+              "error_ac_vector_rms": 0.21026573256696066,
+              "actual_peak_to_peak_components": [
+                1.3081582821676576,
+                0.10623219697553621,
+                0.5628645625339195
+              ],
+              "error_peak_to_peak_components": [
+                1.3081582821676576,
+                0.10623219697553621,
+                0.5628645625339195
+              ],
+              "sampled_max_abs_actual_components": [
+                0.8726328081903125,
+                0.05746197429022151,
+                0.3105647877454406
+              ],
+              "sampled_max_abs_error_components": [
+                0.8726328081903125,
+                0.05746197429022151,
+                0.3105647877454406
+              ],
+              "sampled_max_actual_vector_norm": 0.8804703978838144,
+              "sampled_max_error_vector_norm": 0.8804703978838144
+            }
+          }
+        },
+        "interpretation": "Uniform saved-tick statistics, inclusive endpoints; AC removes only within-window mean. Cartesian force N and generalized Euler-coordinate moment Nm are reported separately; peaks are saved-tick peaks."
+      },
+      "final_two_seconds": {
+        "available": true,
+        "interval_s": [
+          22.0,
+          24.0
+        ],
+        "samples": 4001,
+        "arms": {
+          "left": {
+            "force_xyz_N": {
+              "samples": 4001,
+              "all_finite": true,
+              "nonfinite_actual_samples": 0,
+              "nonfinite_desired_samples": 0,
+              "actual_mean": [
+                -0.0032833937961630763,
+                -4.908111338650262,
+                -0.6694169070698596
+              ],
+              "desired_mean": [
+                0.0,
+                -5.0,
+                0.0
+              ],
+              "error_bias": [
+                -0.0032833937961630763,
+                0.09188866134972883,
+                -0.6694169070698596
+              ],
+              "error_rms_components": [
+                1.2214283005707667,
+                2.4169097261068337,
+                0.8525177808631149
+              ],
+              "error_vector_rms": 2.839036154097508,
+              "actual_ac_rms_components": [
+                1.2214238874200758,
+                2.4151623336879795,
+                0.5278897339566241
+              ],
+              "actual_ac_vector_rms": 2.7574540761438495,
+              "error_ac_rms_components": [
+                1.2214238874200758,
+                2.4151623336879786,
+                0.5278897339566241
+              ],
+              "error_ac_vector_rms": 2.7574540761438495,
+              "actual_peak_to_peak_components": [
+                6.753532996089827,
+                13.411374819539915,
+                2.095028040210785
+              ],
+              "error_peak_to_peak_components": [
+                6.753532996089827,
+                13.411374819539915,
+                2.095028040210785
+              ],
+              "sampled_max_abs_actual_components": [
+                4.252698497261404,
+                13.613742318007027,
+                1.775473968627784
+              ],
+              "sampled_max_abs_error_components": [
+                4.252698497261404,
+                8.613742318007027,
+                1.775473968627784
+              ],
+              "sampled_max_actual_vector_norm": 14.31479629278802,
+              "sampled_max_error_vector_norm": 9.683799343436823
+            },
+            "euler_moment_xyz_Nm": {
+              "samples": 4001,
+              "all_finite": true,
+              "nonfinite_actual_samples": 0,
+              "nonfinite_desired_samples": 0,
+              "actual_mean": [
+                -0.1346016089493655,
+                -0.0009874690079974184,
+                0.02408486800743592
+              ],
+              "desired_mean": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "error_bias": [
+                -0.1346016089493655,
+                -0.0009874690079974184,
+                0.02408486800743592
+              ],
+              "error_rms_components": [
+                0.21349213052887006,
+                0.002522321814209143,
+                0.0423063683416939
+              ],
+              "error_vector_rms": 0.21765817399618517,
+              "actual_ac_rms_components": [
+                0.1657145034871667,
+                0.002320993815734956,
+                0.034781430898217384
+              ],
+              "actual_ac_vector_rms": 0.1693411692814785,
+              "error_ac_rms_components": [
+                0.1657145034871667,
+                0.002320993815734956,
+                0.034781430898217384
+              ],
+              "error_ac_vector_rms": 0.1693411692814785,
+              "actual_peak_to_peak_components": [
+                0.7492142489681888,
+                0.016543631764766926,
+                0.2510329296740531
+              ],
+              "error_peak_to_peak_components": [
+                0.7492142489681888,
+                0.016543631764766926,
+                0.2510329296740531
+              ],
+              "sampled_max_abs_actual_components": [
+                0.5316594748162513,
+                0.009268450815492768,
+                0.16073928366303014
+              ],
+              "sampled_max_abs_error_components": [
+                0.5316594748162513,
+                0.009268450815492768,
+                0.16073928366303014
+              ],
+              "sampled_max_actual_vector_norm": 0.5316675983863023,
+              "sampled_max_error_vector_norm": 0.5316675983863023
+            }
+          },
+          "right": {
+            "force_xyz_N": {
+              "samples": 4001,
+              "all_finite": true,
+              "nonfinite_actual_samples": 0,
+              "nonfinite_desired_samples": 0,
+              "actual_mean": [
+                0.0032833937961630763,
+                4.908111338650262,
+                0.6694169070698596
+              ],
+              "desired_mean": [
+                0.0,
+                5.0,
+                0.0
+              ],
+              "error_bias": [
+                0.0032833937961630763,
+                -0.09188866134972883,
+                0.6694169070698596
+              ],
+              "error_rms_components": [
+                1.2214283005707667,
+                2.4169097261068337,
+                0.8525177808631148
+              ],
+              "error_vector_rms": 2.839036154097508,
+              "actual_ac_rms_components": [
+                1.2214238874200758,
+                2.4151623336879795,
+                0.5278897339566242
+              ],
+              "actual_ac_vector_rms": 2.7574540761438495,
+              "error_ac_rms_components": [
+                1.2214238874200758,
+                2.4151623336879786,
+                0.5278897339566242
+              ],
+              "error_ac_vector_rms": 2.7574540761438495,
+              "actual_peak_to_peak_components": [
+                6.753532996089827,
+                13.411374819539915,
+                2.095028040210785
+              ],
+              "error_peak_to_peak_components": [
+                6.753532996089827,
+                13.411374819539915,
+                2.095028040210785
+              ],
+              "sampled_max_abs_actual_components": [
+                4.252698497261404,
+                13.613742318007027,
+                1.775473968627784
+              ],
+              "sampled_max_abs_error_components": [
+                4.252698497261404,
+                8.613742318007027,
+                1.775473968627784
+              ],
+              "sampled_max_actual_vector_norm": 14.31479629278802,
+              "sampled_max_error_vector_norm": 9.683799343436823
+            },
+            "euler_moment_xyz_Nm": {
+              "samples": 4001,
+              "all_finite": true,
+              "nonfinite_actual_samples": 0,
+              "nonfinite_desired_samples": 0,
+              "actual_mean": [
+                0.1346016089493655,
+                0.0009874690079974186,
+                -0.02408486800743592
+              ],
+              "desired_mean": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "error_bias": [
+                0.1346016089493655,
+                0.0009874690079974186,
+                -0.02408486800743592
+              ],
+              "error_rms_components": [
+                0.21349213052887006,
+                0.002522321814209143,
+                0.0423063683416939
+              ],
+              "error_vector_rms": 0.21765817399618517,
+              "actual_ac_rms_components": [
+                0.1657145034871667,
+                0.002320993815734956,
+                0.034781430898217384
+              ],
+              "actual_ac_vector_rms": 0.1693411692814785,
+              "error_ac_rms_components": [
+                0.1657145034871667,
+                0.002320993815734956,
+                0.034781430898217384
+              ],
+              "error_ac_vector_rms": 0.1693411692814785,
+              "actual_peak_to_peak_components": [
+                0.7492142489681888,
+                0.016543631764766926,
+                0.2510329296740531
+              ],
+              "error_peak_to_peak_components": [
+                0.7492142489681888,
+                0.016543631764766926,
+                0.2510329296740531
+              ],
+              "sampled_max_abs_actual_components": [
+                0.5316594748162513,
+                0.009268450815492768,
+                0.16073928366303014
+              ],
+              "sampled_max_abs_error_components": [
+                0.5316594748162513,
+                0.009268450815492768,
+                0.16073928366303014
+              ],
+              "sampled_max_actual_vector_norm": 0.5316675983863023,
+              "sampled_max_error_vector_norm": 0.5316675983863023
+            }
+          }
+        },
+        "interpretation": "Uniform saved-tick statistics, inclusive endpoints; AC removes only within-window mean. Cartesian force N and generalized Euler-coordinate moment Nm are reported separately; peaks are saved-tick peaks."
+      },
+      "motion_after_two_seconds": {
+        "available": true,
+        "interval_s": [
+          2.0,
+          20.0
+        ],
+        "samples": 36001,
+        "arms": {
+          "left": {
+            "force_xyz_N": {
+              "samples": 36001,
+              "all_finite": true,
+              "nonfinite_actual_samples": 0,
+              "nonfinite_desired_samples": 0,
+              "actual_mean": [
+                0.01050584543562108,
+                -4.373602942286048,
+                -0.6108961379411932
+              ],
+              "desired_mean": [
+                0.0,
+                -5.0,
+                0.0
+              ],
+              "error_bias": [
+                0.01050584543562108,
+                0.6263970577139587,
+                -0.6108961379411932
+              ],
+              "error_rms_components": [
+                0.8596187430866766,
+                2.880516262836954,
+                0.8593599656950116
+              ],
+              "error_vector_rms": 3.12647051394595,
+              "actual_ac_rms_components": [
+                0.8595545420027769,
+                2.8115833024392898,
+                0.6044050457167501
+              ],
+              "actual_ac_vector_rms": 3.0015229695141388,
+              "error_ac_rms_components": [
+                0.8595545420027769,
+                2.811583302439289,
+                0.6044050457167501
+              ],
+              "error_ac_vector_rms": 3.0015229695141383,
+              "actual_peak_to_peak_components": [
+                7.2815818948975135,
+                22.96313239838734,
+                6.486630479183129
+              ],
+              "error_peak_to_peak_components": [
+                7.2815818948975135,
+                22.96313239838734,
+                6.486630479183129
+              ],
+              "sampled_max_abs_actual_components": [
+                4.425413538565152,
+                17.745738461895844,
+                3.351248319241499
+              ],
+              "sampled_max_abs_error_components": [
+                4.425413538565152,
+                12.745738461895844,
+                3.351248319241499
+              ],
+              "sampled_max_actual_vector_norm": 18.103165853679215,
+              "sampled_max_error_vector_norm": 13.23885302081939
+            },
+            "euler_moment_xyz_Nm": {
+              "samples": 36001,
+              "all_finite": true,
+              "nonfinite_actual_samples": 0,
+              "nonfinite_desired_samples": 0,
+              "actual_mean": [
+                -0.0872608346021553,
+                -0.0023164442143588032,
+                0.06118256055872014
+              ],
+              "desired_mean": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "error_bias": [
+                -0.0872608346021553,
+                -0.0023164442143588032,
+                0.06118256055872014
+              ],
+              "error_rms_components": [
+                0.2153720353707733,
+                0.010966360533766746,
+                0.09010957422071057
+              ],
+              "error_vector_rms": 0.23372015328025067,
+              "actual_ac_rms_components": [
+                0.19690266723507122,
+                0.010718915502900488,
+                0.0661545890299101
+              ],
+              "actual_ac_vector_rms": 0.20799515658678072,
+              "error_ac_rms_components": [
+                0.19690266723507122,
+                0.010718915502900488,
+                0.0661545890299101
+              ],
+              "error_ac_vector_rms": 0.20799515658678072,
+              "actual_peak_to_peak_components": [
+                1.0041707920057306,
+                0.10623219697553621,
+                0.5026255299435798
+              ],
+              "error_peak_to_peak_components": [
+                1.0041707920057306,
+                0.10623219697553621,
+                0.5026255299435798
+              ],
+              "sampled_max_abs_actual_components": [
+                0.5686453180283855,
+                0.05746197429022152,
+                0.3105647877454406
+              ],
+              "sampled_max_abs_error_components": [
+                0.5686453180283855,
+                0.05746197429022152,
+                0.3105647877454406
+              ],
+              "sampled_max_actual_vector_norm": 0.5704756159821459,
+              "sampled_max_error_vector_norm": 0.5704756159821459
+            }
+          },
+          "right": {
+            "force_xyz_N": {
+              "samples": 36001,
+              "all_finite": true,
+              "nonfinite_actual_samples": 0,
+              "nonfinite_desired_samples": 0,
+              "actual_mean": [
+                -0.010505845435621075,
+                4.373602942286048,
+                0.6108961379411934
+              ],
+              "desired_mean": [
+                0.0,
+                5.0,
+                0.0
+              ],
+              "error_bias": [
+                -0.010505845435621075,
+                -0.6263970577139587,
+                0.6108961379411934
+              ],
+              "error_rms_components": [
+                0.8596187430866766,
+                2.880516262836954,
+                0.8593599656950113
+              ],
+              "error_vector_rms": 3.12647051394595,
+              "actual_ac_rms_components": [
+                0.8595545420027769,
+                2.8115833024392898,
+                0.6044050457167502
+              ],
+              "actual_ac_vector_rms": 3.0015229695141388,
+              "error_ac_rms_components": [
+                0.8595545420027769,
+                2.811583302439289,
+                0.6044050457167502
+              ],
+              "error_ac_vector_rms": 3.0015229695141383,
+              "actual_peak_to_peak_components": [
+                7.2815818948975135,
+                22.96313239838734,
+                6.486630479183127
+              ],
+              "error_peak_to_peak_components": [
+                7.2815818948975135,
+                22.96313239838734,
+                6.486630479183127
+              ],
+              "sampled_max_abs_actual_components": [
+                4.425413538565152,
+                17.745738461895844,
+                3.351248319241499
+              ],
+              "sampled_max_abs_error_components": [
+                4.425413538565152,
+                12.745738461895844,
+                3.351248319241499
+              ],
+              "sampled_max_actual_vector_norm": 18.103165853679215,
+              "sampled_max_error_vector_norm": 13.23885302081939
+            },
+            "euler_moment_xyz_Nm": {
+              "samples": 36001,
+              "all_finite": true,
+              "nonfinite_actual_samples": 0,
+              "nonfinite_desired_samples": 0,
+              "actual_mean": [
+                0.0872608346021553,
+                0.002316444214358803,
+                -0.06118256055872014
+              ],
+              "desired_mean": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "error_bias": [
+                0.0872608346021553,
+                0.002316444214358803,
+                -0.06118256055872014
+              ],
+              "error_rms_components": [
+                0.2153720353707733,
+                0.010966360533766746,
+                0.09010957422071057
+              ],
+              "error_vector_rms": 0.23372015328025067,
+              "actual_ac_rms_components": [
+                0.19690266723507122,
+                0.01071891550290049,
+                0.0661545890299101
+              ],
+              "actual_ac_vector_rms": 0.20799515658678072,
+              "error_ac_rms_components": [
+                0.19690266723507122,
+                0.01071891550290049,
+                0.0661545890299101
+              ],
+              "error_ac_vector_rms": 0.20799515658678072,
+              "actual_peak_to_peak_components": [
+                1.0041707920057306,
+                0.10623219697553621,
+                0.5026255299435798
+              ],
+              "error_peak_to_peak_components": [
+                1.0041707920057306,
+                0.10623219697553621,
+                0.5026255299435798
+              ],
+              "sampled_max_abs_actual_components": [
+                0.5686453180283855,
+                0.05746197429022151,
+                0.3105647877454406
+              ],
+              "sampled_max_abs_error_components": [
+                0.5686453180283855,
+                0.05746197429022151,
+                0.3105647877454406
+              ],
+              "sampled_max_actual_vector_norm": 0.5704756159821459,
+              "sampled_max_error_vector_norm": 0.5704756159821459
+            }
+          }
+        },
+        "interpretation": "Uniform saved-tick statistics, inclusive endpoints; AC removes only within-window mean. Cartesian force N and generalized Euler-coordinate moment Nm are reported separately; peaks are saved-tick peaks."
+      }
+    },
+    "saved_tick_joint_limit_margin_rad": 0.5694410577500433,
+    "saved_tick_max_speed_limit_ratio": 0.7978721205790281,
+    "all_physics_step_joint_limit_margin_rad": 0.5694408270811007,
+    "all_physics_step_max_speed_limit_ratio": 0.7978721205790281,
+    "maximum_contact_count": 0,
+    "mujoco_warnings": {},
+    "maximum_weld_residual": 7.903907039230802e-06,
+    "interpretation": "Performance outcomes include every registered success, termination, violation and saturated tick; no method is required to outperform proposed by the validity audit."
+  },
+  "scope": "All saved ticks for FK, evaluation boundaries, entry and learning; sampled independently reconstructed control formulas and full-MuJoCo RK4 interval replay. Performance failure is retained separately. No continuous-time, global fixed-time, or exact-truth convergence certificate.",
+  "method": "proposed",
+  "scenario": "nominal",
+  "input_sha256": {
+    "trajectory.npz": "732b25e8a7f261bcf1cea90747ae348d6b3eb49f45d336fcf5a68807b055f7e8",
+    "summary.json": "9cd7b59d37a62b192510d9b469f387ff11f2c9a94611c95dffb7b836f19b8301",
+    "source_manifest.json": "61766a9f765a7a4fc0e288a0544c3fbe1c33cd4ac920d2c8ef0e1f2a1e23d63e",
+    "learning_state.npz": "eb6ace5314127f86444c2f0dca0f5d2de723eb2012c408284b2909917635c0a4"
+  },
+  "validator_sha256": "7a552e4e611e479e6986479cd377a9f4ee0973600f1996496f156014e83676e5",
+  "passed": true
+}

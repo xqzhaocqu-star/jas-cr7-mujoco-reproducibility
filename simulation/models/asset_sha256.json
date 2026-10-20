@@ -1,0 +1,12 @@
+{
+  "assets/xMateCR7_base.stl": "bb3050346de453f83f8022807586e20467fae36a87108741e2c4db666edc9553",
+  "assets/xMateCR7_link1.stl": "0907827ed9e80de931f6c84eb186bc3956720f2d8c5e0c00c0fd9d5cab5fc36d",
+  "assets/xMateCR7_link2.stl": "b6020cc21811bb9600932fd1b6715dce5b126ec1d1f34254b75498e42d0b519f",
+  "assets/xMateCR7_link3.stl": "41035c1f9470423e97f9b093388c8a02707b57d77d02d229ea1dbda003e9b501",
+  "assets/xMateCR7_link4.stl": "2c17dd7853adb1a2c33d0d04f2850ee4937986f15dbc8ae89121985b0fdab641",
+  "assets/xMateCR7_link5.stl": "36b37d6c8a51aa9c4b148b65124810a455ebc2021ca42973cfa7bdac5754cf54",
+  "assets/xMateCR7_link6.stl": "498b45c51581e6fb6f8fdeb9cd3d72d36f82711252717725231faa33577f85f1",
+  "source/TRO_model_audit.json": "2e121a3042decc819d9e6481517be4f8e13032952c728dd1245d0d70a986ea64",
+  "source/TRO_xmate_cr7_scene.xml": "d4f091c6b39b31f41ca2ae89fb09415873520e86f7aca774a1ea474d23ed8ddf",
+  "source/xMateCR7.urdf.xacro": "6ccdbe44766438cbbc7d778d3d798d12fbadf6c868d49cf970b040cb922a200d"
+}

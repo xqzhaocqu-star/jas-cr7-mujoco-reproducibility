@@ -1,0 +1,22 @@
+{
+  "controller_access": "for offline evaluation and plant construction only; controller must use prior bounds, not true multipliers",
+  "left_density_multipliers": [
+    0.94,
+    1.06,
+    1.04,
+    0.97,
+    1.05,
+    0.96
+  ],
+  "right_density_multipliers": [
+    1.06,
+    0.94,
+    0.96,
+    1.03,
+    0.95,
+    1.04
+  ],
+  "left_viscous_multiplier": 0.98,
+  "right_viscous_multiplier": 1.04,
+  "payload_density_multiplier": 1.08
+}

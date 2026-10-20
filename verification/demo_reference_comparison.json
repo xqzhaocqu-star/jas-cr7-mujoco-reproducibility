@@ -1,0 +1,11 @@
+{
+  "comparison": "Fresh standalone rerun versus historical nominal Proposed samples on this machine",
+  "maximum_absolute_difference": {
+    "t": 0.0,
+    "qpos": 0.0,
+    "qvel": 0.0,
+    "theta": 0.0,
+    "error": 0.0
+  },
+  "does_not_imply_cross_platform_bitwise_reproducibility": true
+}
